@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish for Healthcare · Repaso para el examen parcial · Capítulos 1 a 4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* SPANISH FOR HEALTHCARE WORKERS · REPASO PARA EL EXAMEN PARCIAL · CAPÍTULOS 1 A 4 */
+:root{
+  --navy:#1B2E4F; --navy-light:#2E4977;
+  --terracotta:#C45D3A; --terracotta-light:#E0876A;
+  --gold:#D4A24C; --gold-light:#EBC373;
+  --sage:#6E8C5F; --sage-light:#9CB590;
+  --cream:#FBF7EE; --cream-dark:#F0E9D8;
+  --text:#1a1a1a; --text-light:#444; --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;font-size:16px;min-height:100vh;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+.app::before{content:'4';position:fixed;top:18px;right:24px;z-index:0;font-family:'Playfair Display',serif;font-size:9rem;font-weight:800;color:var(--navy);opacity:0.04;pointer-events:none;line-height:1;}
+
+.chap-head{margin-top:36px;padding:32px 36px;border-radius:18px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.chap-head::after{content:'';position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);}
+.header-badge{display:inline-block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(212,162,76,0.22);color:var(--gold-light);padding:5px 12px;border-radius:20px;margin-bottom:10px;}
+.header-title{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;}
+.header-subtitle{display:block;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;}
+
+.prog-bar{height:8px;background:var(--cream-dark);border-radius:4px;margin:6px 0 0;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));width:0%;transition:width 0.6s ease-out;}
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.completion-score{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--sage);background:rgba(110,140,95,0.14);padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.completion-pct{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);margin-left:14px;}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--text-light);border:1px solid transparent;cursor:pointer;transition:all 0.2s;}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);}
+
+.submit-bar{background:var(--cream-dark);border-radius:12px;padding:14px 18px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.submit-bar label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);}
+#studentName{flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{background:var(--terracotta);color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,transform 0.2s;}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);letter-spacing:0.04em;}
+
+.quiz-item{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--sage);}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);font-weight:400;margin-right:6px;}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{display:flex;align-items:flex-start;gap:10px;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;font-size:0.88rem;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);width:100%;transition:border-color 0.2s,background 0.2s;}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);flex-shrink:0;margin-top:2px;}
+.quiz-explain{font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;background:#fff;border-left:3px solid var(--gold);display:none;}
+.quiz-explain.show{display:block;}
+
+.task-input{width:100%;border:none;border-bottom:2px solid var(--cream-dark);background:transparent;font-family:inherit;font-size:0.92rem;color:var(--navy);padding:5px 6px;}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+
+.nav{display:flex;gap:4px;flex-wrap:wrap;background:#fff;padding:6px;border-radius:14px;box-shadow:var(--tile-shadow);margin-bottom:24px;}
+.tab{flex:1 1 auto;min-width:110px;padding:12px 14px;background:transparent;border:none;border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:all 0.18s ease;min-height:44px;}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(27,46,79,0.25);}
+
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sec-sub{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;}
+
+.week-hero{background:#fff;padding:26px 30px;border-radius:14px;margin-bottom:24px;box-shadow:var(--tile-shadow);border-left:5px solid var(--terracotta);}
+.week-hero h1{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--navy);margin-bottom:8px;}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-block;padding:5px 11px;background:var(--cream-dark);color:var(--navy);border-radius:14px;font-size:0.78rem;font-weight:600;font-family:'Space Mono',monospace;letter-spacing:0.02em;}
+
+.ch-intro{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.ch-intro::before{content:'';position:absolute;left:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);}
+.ch-intro .label{position:relative;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.ch-intro h2{position:relative;font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.ch-intro p{position:relative;font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);}
+
+.card{background:#fff;padding:22px 26px;border-radius:14px;margin-bottom:18px;box-shadow:var(--tile-shadow);}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.card-title .pill{font-family:'Space Mono',monospace;font-size:0.65rem;background:var(--gold);color:#fff;padding:3px 9px;border-radius:12px;letter-spacing:0.1em;}
+
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.obj{background:var(--cream);padding:14px 16px;border-radius:10px;border-left:3px solid var(--sage);display:flex;gap:11px;align-items:flex-start;}
+.obj-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.vocab-card{perspective:1000px;height:118px;cursor:pointer;}
+.vocab-card-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border-radius:11px;text-align:center;box-shadow:var(--tile-shadow);}
+.vocab-front{background:#fff;border:2px solid var(--cream-dark);font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:0.98rem;}
+.vocab-front small{display:block;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);font-weight:400;margin-top:5px;letter-spacing:0.04em;}
+.vocab-back{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));color:#fff;transform:rotateY(180deg);font-size:0.92rem;font-weight:600;}
+.vocab-ex{display:block;font-size:0.74rem;font-weight:400;font-style:italic;margin-top:6px;opacity:0.92;padding:0 18px;}
+.vocab-sound{position:absolute;top:6px;right:9px;font-size:0.75rem;opacity:0.55;}
+.vocab-replay{position:absolute;bottom:6px;right:8px;background:rgba(255,255,255,0.22);border:none;border-radius:50%;width:30px;height:30px;font-size:0.85rem;cursor:pointer;color:#fff;line-height:30px;padding:0;}
+.vocab-replay:hover,.vocab-replay:focus-visible{background:rgba(255,255,255,0.4);outline:2px solid #fff;}
+.vocab-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:12px;}
+.vocab-card.conn-card .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.conn-card .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+
+.gbox{background:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--tile-shadow);border-top:4px solid var(--terracotta);}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.gbox h3 .num{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--terracotta);color:#fff;padding:4px 10px;border-radius:11px;letter-spacing:0.1em;}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;}
+
+.conj-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(27,46,79,0.05);}
+.conj-table th,.conj-table td{padding:9px 13px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--cream-dark);}
+.conj-table th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;}
+.conj-table td .pn{color:var(--text-hint);}
+.conj-table td .fm{color:var(--terracotta);font-weight:700;font-style:italic;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+.conj-table tr:last-child td{border-bottom:none;}
+
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--cream);padding:16px 18px;border-radius:10px;border-top:4px solid var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:4px;}
+.col-card .meaning{font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--text-hint);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;}
+.col-card .ex{font-style:italic;font-size:0.85rem;color:var(--text);background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+.ex-box{background:var(--cream);border-left:3px solid var(--sage);padding:12px 16px;border-radius:8px;margin:14px 0;}
+.ex-box p{font-size:0.9rem;color:var(--text);margin:4px 0;}
+.ex-box em{color:var(--text-hint);font-style:italic;}
+.ojo{background:#FFF6F0;border-left:4px solid var(--terracotta);padding:14px 18px;border-radius:8px;margin:16px 0;}
+.ojo-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* Alphabet grid */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin:14px 0;}
+.alpha-cell{background:var(--cream);border-radius:8px;padding:9px 6px;text-align:center;border:1px solid var(--cream-dark);}
+.alpha-cell .ltr{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);display:block;}
+.alpha-cell .nm{font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--terracotta);letter-spacing:0.04em;display:block;margin-top:2px;}
+.vowel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0;}
+.vowel-cell{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;border-radius:10px;padding:14px 10px;text-align:center;}
+.vowel-cell .v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;display:block;line-height:1;}
+.vowel-cell .s{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gold-light);display:block;margin-top:6px;letter-spacing:0.06em;}
+.vowel-cell .w{font-size:0.8rem;color:rgba(255,255,255,0.9);display:block;margin-top:4px;font-style:italic;}
+
+.ex-item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--cream-dark);font-size:0.97rem;}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;}
+.ex-text{flex:1;line-height:1.9;color:var(--text);}
+.ex-hint{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--terracotta);margin-left:4px;}
+.blk{display:inline-block;width:120px;padding:6px 10px;border:2px solid var(--cream-dark);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.blk.wide{width:170px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:none;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.92rem;font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.word-bank{background:var(--cream);padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:0.88rem;}
+.word-bank-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.word-bank-words span{display:inline-block;background:#fff;padding:3px 9px;border-radius:11px;margin:2px 3px;font-size:0.84rem;border:1px solid var(--cream-dark);color:var(--navy);font-weight:700;}
+
+/* Matching */
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.match-col-label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-hint);margin-bottom:6px;}
+.mi{padding:11px 13px;border:2px solid var(--cream-dark);border-radius:9px;cursor:pointer;font-size:0.86rem;background:#fff;transition:all 0.12s;line-height:1.4;margin-bottom:7px;color:var(--text);}
+.mi:hover{border-color:var(--sage-light);}
+.mi.sel{border-color:var(--navy);background:#f3f5fa;color:var(--navy);}
+.mi.done{border-color:var(--sage);background:#eef6ea;color:#3F5C32;pointer-events:none;opacity:0.75;}
+.mi.bad{border-color:var(--terracotta);background:#fbeceb;}
+
+/* Conjugation game */
+.game-wrap{background:var(--cream);border-radius:14px;padding:22px;text-align:center;}
+.game-scorebar{display:flex;justify-content:center;gap:22px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);}
+.game-scorebar b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terracotta);margin-top:2px;}
+.game-prompt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin:10px 0 4px;}
+.game-sub{font-size:0.85rem;color:var(--text-hint);font-style:italic;margin-bottom:18px;}
+.game-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto;}
+@media(max-width:520px){.game-opts{grid-template-columns:1fr;}}
+.game-opt{background:#fff;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 10px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;transition:all 0.12s;}
+.game-opt:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+.game-opt.is-correct{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.game-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;color:#8E3A1F;}
+.game-feedback{min-height:22px;margin-top:14px;font-weight:700;font-size:0.95rem;}
+.game-feedback.ok{color:#3F5C32;}
+.game-feedback.ng{color:#8E3A1F;}
+.game-done{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);}
+
+.cult-card{background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px;box-shadow:var(--soft-shadow);}
+.cult-card .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.cult-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#fff;}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card .fact-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cult-card .fact-pills span{background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;}
+
+.footer{margin-top:36px;padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--text-hint);letter-spacing:0.05em;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+
+/* ── Shared additions (dialogue, pod, formula) ── */
+.dlg{background:var(--cream);border-radius:10px;padding:14px 18px;margin:14px 0;}
+.dlg p{font-size:0.93rem;margin:6px 0;line-height:1.5;}
+.dlg .who{display:inline-block;min-width:92px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--terracotta);font-weight:700;}
+.dlg .who.pt{color:var(--sage);}
+.dlg .en{display:block;font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-left:96px;}
+.pod-hero{background:linear-gradient(135deg,#9B2C2C 0%,#B84444 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.pod-hero::after{content:'🩹';position:absolute;right:22px;bottom:6px;font-size:4.5rem;opacity:0.22;}
+.pod-hero .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:6px;}
+.pod-hero h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.pod-hero p{font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);max-width:760px;}
+.vocab-card.pod-card .vocab-front{border-color:#E3B2B2;color:#9B2C2C;}
+.vocab-card.pod-card .vocab-back{background:linear-gradient(135deg,#9B2C2C,#B84444);}
+.tab.pod-tab{color:#9B2C2C;}
+.tab.pod-tab.active{background:#9B2C2C;color:#fff;}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0;font-size:0.95rem;}
+.formula span{background:var(--cream);border:1px solid var(--cream-dark);border-radius:8px;padding:6px 11px;font-weight:600;color:var(--navy);}
+.formula span.arrow{background:none;border:none;color:var(--terracotta);font-weight:700;padding:0 2px;}
+.formula span.res{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+.tts-note{font-size:0.78rem;color:var(--text-hint);text-align:center;margin-top:-6px;margin-bottom:14px;}
+/* ── Capítulo 3 additions ── */
+.play-btn{display:inline-flex;align-items:center;gap:5px;background:var(--navy);color:#fff;border:none;border-radius:16px;padding:5px 12px;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.04em;cursor:pointer;margin-right:8px;vertical-align:middle;}
+.play-btn:hover{background:var(--navy-light);}
+.alpha-cell.num-cell{cursor:pointer;border:1px solid var(--cream-dark);font-family:inherit;transition:all 0.12s;}
+.alpha-cell.num-cell:hover{border-color:var(--gold);background:#fff;transform:translateY(-1px);}
+.alpha-cell.num-cell .nm{text-transform:none;}
+/* ── Capítulo 4 additions ── */
+.tab.rev-tab{color:var(--sage);}
+.tab.rev-tab.active{background:var(--sage);color:#fff;}
+.body-wrap{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:20px;align-items:start;margin:10px 0;}
+@media(max-width:700px){.body-wrap{grid-template-columns:1fr;}}
+.body-fig{background:var(--cream);border-radius:12px;padding:10px;}
+.body-fig svg{width:100%;height:auto;display:block;}
+.body-fig .bp{fill:#E9DCC4;stroke:#CDB896;stroke-width:2;}
+.body-fig .hs{cursor:pointer;}
+.body-fig .hs circle{fill:var(--terracotta);stroke:#fff;stroke-width:2;transition:fill 0.15s;}
+.body-fig .hs:hover circle,.body-fig .hs:focus circle,.body-fig .hs.on circle{fill:var(--navy);}
+.body-fig .hs text{fill:#fff;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;pointer-events:none;}
+.body-fig .hs:focus{outline:none;}
+.body-label{background:var(--navy);color:#fff;border-radius:12px;padding:16px 18px;margin-bottom:12px;display:flex;flex-direction:column;gap:2px;}
+.body-label .bl-num{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--gold-light);letter-spacing:0.1em;}
+.body-label .bl-word{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;}
+.body-label .bl-en{font-size:0.9rem;color:rgba(255,255,255,0.8);font-style:italic;}
+
+/* ── Midterm review additions ── */
+.oral-check{display:inline-flex;align-items:center;gap:6px;margin-left:8px;font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--sage);font-weight:700;cursor:pointer;white-space:nowrap;}
+.oral-check input{width:18px;height:18px;accent-color:var(--sage);cursor:pointer;}
+.nav .tab{min-width:0;padding:12px 10px;font-size:0.86rem;}
+.app::before{content:'R';}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · SPANISH FOR HEALTHCARE</span>
+    <span class="header-title">Repaso · Examen parcial</span>
+    <span class="header-subtitle">Midterm Review · Capítulos 1 a 4</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-score" id="completionScore">★ 0% correcto</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">⬇ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your review report.</span>
+  </div>
+
+  <nav class="nav" aria-label="Review sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('c1',this)">Cap. 1 · Saludos</button>
+    <button class="tab" onclick="switchTab('c2',this)">Cap. 2 · Mandatos</button>
+    <button class="tab" onclick="switchTab('c3',this)">Cap. 3 · Emergencias</button>
+    <button class="tab" onclick="switchTab('c4',this)">Cap. 4 · El cuerpo</button>
+    <button class="tab" onclick="switchTab('mx',this)">Práctica mixta</button>
+    <button class="tab rev-tab" onclick="switchTab('ex',this)">Examen</button>
+    <button class="tab pod-tab" onclick="switchTab('or',this)">Oral</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Repaso para el examen parcial</h2>
+    <p class="sec-sub">capítulos 1 a 4 · vocabulario · gramática · comprensión auditiva · práctica oral</p>
+
+    <div class="ch-intro">
+      <div class="label">Preparación · Midterm review</div>
+      <h2>Four chapters, one patient visit</h2>
+      <p>Everything you have learned so far fits into a single visit. You <strong>greet and register</strong> the patient (Cap. 1), give <strong>polite instructions</strong> (Cap. 2), react to an <strong>emergency</strong> and report numbers (Cap. 3), and ask <strong>where it hurts</strong> (Cap. 4). This page pulls the essentials from each chapter into one place so you can find your weak spots before the exam.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>How to use this review</h1>
+      <p>Work through the tabs in order, or jump straight to the chapter you feel least sure about. Everything is graded automatically.</p>
+      <div class="topic-chips">
+        <span class="chip">1 · repasa cada capítulo</span>
+        <span class="chip">2 · práctica mixta</span>
+        <span class="chip">3 · examen de práctica (20)</span>
+        <span class="chip">4 · examen oral</span>
+        <span class="chip">5 · descarga tu reporte</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Qué necesito saber? · Checklist <span class="pill">CAPS. 1 A 4</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text"><strong>Capítulo 1 · Primeras palabras:</strong> greetings by time of day, the alphabet and spelling names, subject pronouns, <em>ser</em>, <em>llamarse</em>, usted vs. tú, and the patient intake questions.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text"><strong>Capítulo 2 · Cortesía y mandatos:</strong> <em>por favor, con permiso, disculpe, lo siento</em>; usted commands (regular, irregular, negative, reflexive), tú commands with children, ustedes with families.</span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text"><strong>Capítulo 3 · Emergencias:</strong> asking for and offering help, <em>hay / tiene / está / no puede</em>, urgent questions and commands, numbers 0 to 100, age with <em>tener</em>, phone and room numbers.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text"><strong>Capítulo 4 · El cuerpo y el dolor:</strong> 20+ body parts with articles, <em>me duele / me duelen</em>, <em>me, te, le, nos, les</em>, describing pain (where, what kind) and asking about it.</span></div>
+        <div class="obj"><span class="obj-num">★</span><span class="obj-text"><strong>Pods de especialidad:</strong> key words from Odontología (Cap. 2), Flight ICU (Cap. 3), and Trauma (Cap. 4) appear in each chapter tab.</span></div>
+        <div class="obj"><span class="obj-num">🗣</span><span class="obj-text"><strong>Speaking:</strong> be ready to greet, register, instruct, and ask about pain in one short role play.</span></div>
+      </div>
+    </div>
+
+    <div class="gbox alt2">
+      <h3><span class="num">TOP 8</span>Errores frecuentes</h3>
+      <p class="sub">The mistakes that cost the most points. Read each pair out loud.</p>
+      <table class="conj-table">
+        <thead><tr><th>✗ Incorrecto</th><th>✓ Correcto</th><th>Cap.</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">Usted eres enfermera.</span></td><td class="accent">Usted es enfermera.</td><td>1</td></tr>
+          <tr><td><span class="pn">Soy una enfermera.</span></td><td class="accent">Soy enfermera.</td><td>1</td></tr>
+          <tr><td><span class="pn">¿Cómo te llamas? (a un adulto nuevo)</span></td><td class="accent">¿Cómo se llama usted?</td><td>1</td></tr>
+          <tr><td><span class="pn">Siéntase aquí. / No muévase.</span></td><td class="accent">Siéntese aquí. / No se mueva.</td><td>2</td></tr>
+          <tr><td><span class="pn">Abre la boca. (a un adulto)</span></td><td class="accent">Abra la boca.</td><td>2</td></tr>
+          <tr><td><span class="pn">Es 70 años. / Es inconsciente.</span></td><td class="accent">Tiene 70 años. / Está inconsciente.</td><td>3</td></tr>
+          <tr><td><span class="pn">Me duele mi cabeza.</span></td><td class="accent">Me duele la cabeza.</td><td>4</td></tr>
+          <tr><td><span class="pn">Me duele los pies.</span></td><td class="accent">Me duelen los pies.</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══ CAPÍTULO 1 ═══ -->
+  <section class="sec" id="sec-c1">
+    <h2 class="sec-title">Capítulo 1 · Primeras palabras</h2>
+    <p class="sec-sub">saludos · el alfabeto · ser · llamarse · usted vs. tú · preguntas personales</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>SER y LLAMARSE</h3>
+      <p class="sub">The two verbs behind every introduction. Usted always takes the él / ella form.</p>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>SER</th><th>LLAMARSE</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="accent">soy</td><td class="accent">me llamo</td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="accent">eres</td><td class="accent">te llamas</td></tr>
+          <tr><td><span class="pn">él / ella / usted</span></td><td class="accent">es</td><td class="accent">se llama</td></tr>
+          <tr><td><span class="pn">nosotros / nosotras</span></td><td class="accent">somos</td><td class="accent">nos llamamos</td></tr>
+          <tr><td><span class="pn">ellos / ellas / ustedes</span></td><td class="accent">son</td><td class="accent">se llaman</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡Ojo! · sin artículo</div><p>With professions, no article: <em>Soy enfermera</em>, not "soy una enfermera." Use <em>de</em> for origin: <em>Soy de Guatemala.</em> Most Spanish speakers have two last names (father's first): Roberto <em>Díaz</em> Hernández is filed under Díaz.</p></div>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Usted vs. tú · preguntas personales</h3>
+      <p class="sub">In healthcare, default to usted. Use tú with children, friends, and classmates.</p>
+      <table class="conj-table">
+        <thead><tr><th>English</th><th>Con USTED</th><th>Con TÚ</th></tr></thead>
+        <tbody>
+          <tr><td>What's your name?</td><td class="accent">¿Cómo se llama usted?</td><td>¿Cómo te llamas?</td></tr>
+          <tr><td>Where are you from?</td><td class="accent">¿De dónde es usted?</td><td>¿De dónde eres?</td></tr>
+          <tr><td>How are you?</td><td class="accent">¿Cómo está usted?</td><td>¿Cómo estás?</td></tr>
+          <tr><td>How old are you?</td><td class="accent">¿Cuántos años tiene?</td><td>¿Cuántos años tienes?</td></tr>
+          <tr><td>Take care.</td><td class="accent">Cuídese.</td><td>Cuídate.</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.9rem;margin-top:12px;">Also ask: <em>¿Cuál es su apellido? ¿Cómo se escribe? ¿Habla usted inglés? ¿En qué puedo ayudarle?</em></p>
+    </div>
+
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Saludos y el alfabeto</h3>
+      <p class="sub">Greet by the time of day, and be ready to spell a name letter by letter.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>BUENOS DÍAS</h4><div class="meaning">morning (until noon)</div><div class="ex">Buenos días, señora López.</div></div>
+        <div class="col-card gd"><h4>BUENAS TARDES</h4><div class="meaning">afternoon (until dark)</div><div class="ex">Buenas tardes, doctor.</div></div>
+        <div class="col-card sg"><h4>BUENAS NOCHES</h4><div class="meaning">evening / night</div><div class="ex">Buenas noches, señor Pérez.</div></div>
+      </div>
+      <p style="font-size:0.9rem;">Tap a name to hear it spelled: <button type="button" class="play-btn" onclick="speak('Ríos. Erre, i con acento, o, ese.')">🔊 Ríos</button><button type="button" class="play-btn" onclick="speak('Gómez. Ge, o con acento, eme, e, zeta.')">🔊 Gómez</button><button type="button" class="play-btn" onclick="speak('Juárez. Jota, u, a con acento, erre, e, zeta.')">🔊 Juárez</button><button type="button" class="play-btn" onclick="speak('Villa. Uve, i, doble ele, a.')">🔊 Villa</button></p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tarjetas · Saludos y frases esenciales <span class="pill">24 CARDS</span></div>
+      <p class="vocab-hint">Tap a card to flip it and hear it. Say it out loud before flipping.</p>
+      <div class="vocab-grid" id="fc1"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Repaso 1 · Ser, llamarse y saludos <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the missing word. Accents are optional.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Yo <input class="blk" id="r1_1" data-answer="soy" placeholder="___"> enfermera. <span class="ex-hint">(ser)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Usted <input class="blk" id="r1_2" data-answer="es" placeholder="___"> la señora Gómez, ¿verdad? <span class="ex-hint">(ser)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Nosotros <input class="blk" id="r1_3" data-answer="somos" placeholder="___"> estudiantes de enfermería. <span class="ex-hint">(ser)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">¿Cómo <input class="blk" id="r1_4" data-answer="se" placeholder="___"> llama usted? <span class="ex-hint">(llamarse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Mucho gusto. Yo <input class="blk" id="r1_5" data-answer="me" placeholder="___"> llamo Roberto. <span class="ex-hint">(llamarse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">¿De dónde <input class="blk" id="r1_6" data-answer="es" placeholder="___"> usted? <span class="ex-hint">(ser · formal)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">A un niño: «Hola, ¿cómo te <input class="blk" id="r1_7" data-answer="llamas" placeholder="___">?» <span class="ex-hint">(llamarse · tú)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">Son las 8:00 p.m. «Buenas <input class="blk" id="r1_8" data-answer="noches" placeholder="___">, señor.» <span class="ex-hint">(saludo)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('r1_1,r1_2,r1_3,r1_4,r1_5,r1_6,r1_7,r1_8','rsR1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r1_1,r1_2,r1_3,r1_4,r1_5,r1_6,r1_7,r1_8','rsR1')">Reset</button>
+      <div class="res-msg" id="rsR1" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CAPÍTULO 2 ═══ -->
+  <section class="sec" id="sec-c2">
+    <h2 class="sec-title">Capítulo 2 · Cortesía y mandatos</h2>
+    <p class="sec-sub">expresiones de cortesía · mandatos formales · negativos · tú y ustedes</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>Mandatos formales (usted)</h3>
+      <p class="sub">Start with the yo form, drop the -o, add the "opposite" vowel. Add -n for ustedes.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>-AR → -E</h4><div class="meaning">respirar, esperar, firmar, tomar</div><div class="ex">Respire profundo.</div><div class="ex">Firme aquí.</div></div>
+        <div class="col-card gd"><h4>-ER / -IR → -A</h4><div class="meaning">comer, beber, toser, abrir</div><div class="ex">Beba mucha agua.</div><div class="ex">Abra la boca.</div></div>
+        <div class="col-card sg"><h4>USTEDES → +N</h4><div class="meaning">a family or a group</div><div class="ex">Pasen, por favor.</div><div class="ex">Siéntense aquí.</div></div>
+      </div>
+      <table class="conj-table">
+        <thead><tr><th>Infinitivo</th><th>yo</th><th>Mandato (usted)</th></tr></thead>
+        <tbody>
+          <tr><td>tener · venir · hacer</td><td>tengo · vengo · hago</td><td class="accent">tenga · venga · haga</td></tr>
+          <tr><td>decir · poner</td><td>digo · pongo</td><td class="accent">diga · ponga</td></tr>
+          <tr><td>ir · ser · estar · dar · saber</td><td>(irregulares)</td><td class="accent">vaya · sea · esté · dé · sepa</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Negativos, pronombres y tú</h3>
+      <p class="sub">Affirmative: the pronoun attaches (and needs an accent). Negative: no + pronoun before the verb.</p>
+      <table class="conj-table">
+        <thead><tr><th>Verbo</th><th>Usted +</th><th>Usted −</th><th>Tú (niño) +</th><th>Tú (niño) −</th></tr></thead>
+        <tbody>
+          <tr><td>sentarse</td><td class="accent">Siéntese.</td><td>No se siente.</td><td class="accent">Siéntate.</td><td>No te sientes.</td></tr>
+          <tr><td>moverse</td><td class="accent">Muévase.</td><td>No se mueva.</td><td class="accent">Muévete.</td><td>No te muevas.</td></tr>
+          <tr><td>abrir</td><td class="accent">Abra.</td><td>No abra.</td><td class="accent">Abre.</td><td>No abras.</td></tr>
+          <tr><td>preocuparse</td><td class="accent">Preocúpese.</td><td>No se preocupe.</td><td class="accent">Preocúpate.</td><td>No te preocupes.</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡Ojo! · cortesía</div><p>Soften any command with <em>por favor</em>, a title (<em>señora, don Luis</em>), or a question: <em>¿Puede firmar aquí, por favor?</em> Before touching a patient or entering a room, say <em>Con permiso</em>.</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tarjetas · Cortesía e instrucciones de cuidado <span class="pill">26 CARDS</span></div>
+      <p class="vocab-hint">Tap a card to flip it and hear it with an example.</p>
+      <div class="vocab-grid" id="fc2"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">★ Pod · Odontología <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fc2pod"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Repaso 2 · Mandatos <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the command for the person in parentheses. Accents are optional.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk" id="r2_1" data-answer="respire" placeholder="___"> profundo, por favor. <span class="ex-hint">(respirar · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk" id="r2_2" data-answer="abra" placeholder="___"> la boca y diga «a». <span class="ex-hint">(abrir · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><input class="blk" id="r2_3" data-answer="siéntese" placeholder="___"> en la camilla. <span class="ex-hint">(sentarse · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">No <input class="blk" id="r2_4" data-answer="se mueva" placeholder="___">, por favor. <span class="ex-hint">(moverse · usted · negativo)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text"><input class="blk" id="r2_5" data-answer="tenga" placeholder="___"> paciencia, por favor. <span class="ex-hint">(tener · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text"><input class="blk" id="r2_6" data-answer="vaya" placeholder="___"> a la farmacia. <span class="ex-hint">(ir · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text"><input class="blk" id="r2_7" data-answer="abre" placeholder="___"> la boca, mi amor. <span class="ex-hint">(abrir · tú, a un niño)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text"><input class="blk" id="r2_8" data-answer="pasen" placeholder="___">, por favor. El doctor los espera. <span class="ex-hint">(pasar · ustedes, a una familia)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('r2_1,r2_2,r2_3,r2_4,r2_5,r2_6,r2_7,r2_8','rsR2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r2_1,r2_2,r2_3,r2_4,r2_5,r2_6,r2_7,r2_8','rsR2')">Reset</button>
+      <div class="res-msg" id="rsR2" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CAPÍTULO 3 ═══ -->
+  <section class="sec" id="sec-c3">
+    <h2 class="sec-title">Capítulo 3 · Emergencias</h2>
+    <p class="sec-sub">pedir y ofrecer ayuda · hay, tiene, está, no puede · números 0 a 100 · edad</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>Describir una emergencia</h3>
+      <p class="sub">Four small structures build almost every emergency sentence.</p>
+      <table class="conj-table">
+        <thead><tr><th>Estructura</th><th>Sirve para…</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">HAY + cosa</span></td><td>there is / there are</td><td class="accent">Hay un accidente. Hay mucha sangre.</td></tr>
+          <tr><td><span class="pn">TIENE + síntoma</span></td><td>he / she has</td><td class="accent">Tiene dolor de pecho.</td></tr>
+          <tr><td><span class="pn">ESTÁ + condición</span></td><td>state or place</td><td class="accent">Está inconsciente. Está en el piso.</td></tr>
+          <tr><td><span class="pn">NO PUEDE + infinitivo</span></td><td>he / she can't</td><td class="accent">No puede respirar.</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.9rem;margin-top:12px;">Urgent questions: <em>¿Qué pasó? ¿Dónde está usted? ¿Está consciente? ¿Respira?</em> Urgent commands: <em>No cuelgue. Cálmese. Dígame la dirección. Presione la herida. No lo mueva.</em></p>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Números, edad y teléfono</h3>
+      <p class="sub">Tap any number to hear it. Watch out for the dangerous pairs.</p>
+      <div class="alpha-grid" id="numGrid"></div>
+      <div class="ojo"><div class="ojo-title">¡Ojo! · parejas peligrosas</div><p><em>sesenta</em> (60) vs. <em>setenta</em> (70) · <em>dos</em> (2) vs. <em>doce</em> (12) · <em>cinco</em> (5) vs. <em>quince</em> (15) vs. <em>cincuenta</em> (50). Age uses <em>tener</em>: <em>Tiene 72 años</em>, never "es 72 años." Phone numbers: digit by digit, or ask <em>Número por número, por favor.</em></p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tarjetas · Emergencias y ayuda <span class="pill">28 CARDS</span></div>
+      <p class="vocab-hint">Tap a card to flip it and hear it with an example.</p>
+      <div class="vocab-grid" id="fc3"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">★ Pod · Flight ICU <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fc3pod"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Repaso 3 · Emergencias y números <span class="pill">9 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Complete each sentence. For items 6 to 8, write the number in words; for item 9, write the digits.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk" id="r3_1" data-answer="hay" placeholder="___"> un accidente en la carretera. <span class="ex-hint">(there is)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Mi esposo <input class="blk" id="r3_2" data-answer="tiene" placeholder="___"> dolor de pecho. <span class="ex-hint">(has)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">La señora <input class="blk" id="r3_3" data-answer="está" placeholder="___"> inconsciente. <span class="ex-hint">(is · condition)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Mi mamá no <input class="blk" id="r3_4" data-answer="puede" placeholder="___"> respirar. <span class="ex-hint">(can't)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">No <input class="blk" id="r3_5" data-answer="cuelgue" placeholder="___">, la ambulancia viene en camino. <span class="ex-hint">(colgar · usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">El paciente tiene <input class="blk" id="r3_6" data-answer="sesenta" placeholder="___"> años. <span class="ex-hint">(60)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Está en el cuarto <input class="blk" id="r3_7" data-answer="cuarenta y cinco" placeholder="___">. <span class="ex-hint">(45)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">La niña tiene <input class="blk" id="r3_8" data-answer="quince" placeholder="___"> años. <span class="ex-hint">(15)</span></span></div>
+      <div class="ex-item"><span class="ex-num">9</span><span class="ex-text">«Setenta y ocho» = <input class="blk" id="r3_9" data-answer="78" data-digits="1" inputmode="numeric" placeholder="___"> <span class="ex-hint">(digits)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('r3_1,r3_2,r3_3,r3_4,r3_5,r3_6,r3_7,r3_8,r3_9','rsR3')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r3_1,r3_2,r3_3,r3_4,r3_5,r3_6,r3_7,r3_8,r3_9','rsR3')">Reset</button>
+      <div class="res-msg" id="rsR3" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CAPÍTULO 4 ═══ -->
+  <section class="sec" id="sec-c4">
+    <h2 class="sec-title">Capítulo 4 · El cuerpo y el dolor</h2>
+    <p class="sec-sub">partes del cuerpo · doler · me, te, le, nos, les · describir y preguntar sobre el dolor</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>El verbo DOLER</h3>
+      <p class="sub">Doler works like gustar: the body part is the subject, the person is the pronoun.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>DUELE</h4><div class="meaning">one thing hurts</div><div class="ex">Me duele la cabeza.</div><div class="ex">Le duele el estómago.</div></div>
+        <div class="col-card gd"><h4>DUELEN</h4><div class="meaning">two or more things hurt</div><div class="ex">Me duelen los pies.</div><div class="ex">Le duelen las rodillas.</div></div>
+        <div class="col-card sg"><h4>¡SIN «MI»!</h4><div class="meaning">use the article, not my / your</div><div class="ex">Me duele <strong>la</strong> espalda.</div><div class="ex">✗ Me duele mi espalda.</div></div>
+      </div>
+      <table class="conj-table">
+        <thead><tr><th>¿A quién?</th><th>Pronombre</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>a mí</td><td class="accent">me</td><td>Me duele el brazo.</td></tr>
+          <tr><td>a ti (niño)</td><td class="accent">te</td><td>¿Te duele la garganta?</td></tr>
+          <tr><td>a usted / a él / a ella</td><td class="accent">le</td><td>¿Dónde le duele?</td></tr>
+          <tr><td>a nosotros</td><td class="accent">nos</td><td>Nos duelen los ojos.</td></tr>
+          <tr><td>a ustedes / a ellos</td><td class="accent">les</td><td>A los niños les duele el estómago.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>Preguntar y describir el dolor</h3>
+      <p class="sub">Four questions cover almost every pain assessment.</p>
+      <table class="conj-table">
+        <thead><tr><th>Pregunta</th><th>English</th><th>Respuesta modelo</th></tr></thead>
+        <tbody>
+          <tr><td class="accent">¿Dónde le duele?</td><td>Where does it hurt?</td><td>Me duele el lado derecho.</td></tr>
+          <tr><td class="accent">¿Desde cuándo?</td><td>Since when?</td><td>Desde ayer. / Desde hace dos días.</td></tr>
+          <tr><td class="accent">¿Cómo es el dolor?</td><td>What is the pain like?</td><td>Es un dolor agudo / sordo.</td></tr>
+          <tr><td class="accent">Del 1 al 10, ¿cuánto le duele?</td><td>From 1 to 10, how much?</td><td>Un siete.</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.9rem;margin-top:12px;">If the patient can't name the part: <em>Muéstreme dónde le duele.</em> Watch for regional words: <em>la barriga, la panza, la guata</em> (stomach).</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tarjetas · El cuerpo y el dolor <span class="pill">36 CARDS</span></div>
+      <p class="vocab-hint">Tap a card, then point to the body part on yourself as you say it.</p>
+      <div class="vocab-grid" id="fc4"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">★ Pod · Trauma <span class="pill">12 CARDS</span></div>
+      <div class="vocab-grid" id="fc4pod"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Repaso 4 · Doler y el dolor <span class="pill">8 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the missing word. Accents are optional.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Me <input class="blk" id="r4_1" data-answer="duele" placeholder="___"> la cabeza. <span class="ex-hint">(doler)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Me <input class="blk" id="r4_2" data-answer="duelen" placeholder="___"> los pies. <span class="ex-hint">(doler)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">A la niña <input class="blk" id="r4_3" data-answer="le" placeholder="___"> duelen los oídos. <span class="ex-hint">(pronombre)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">A nosotros <input class="blk" id="r4_4" data-answer="nos" placeholder="___"> duelen los ojos. <span class="ex-hint">(pronombre)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Señor, ¿dónde <input class="blk" id="r4_5" data-answer="le" placeholder="___"> duele? <span class="ex-hint">(a usted)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Le duele la <input class="blk" id="r4_6" data-answer="rodilla" placeholder="___"> izquierda. <span class="ex-hint">(knee)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Es un dolor <input class="blk" id="r4_7" data-answer="agudo" placeholder="___">. <span class="ex-hint">(sharp)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">¿Desde <input class="blk" id="r4_8" data-answer="cuándo" placeholder="___"> le duele? <span class="ex-hint">(since when)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('r4_1,r4_2,r4_3,r4_4,r4_5,r4_6,r4_7,r4_8','rsR4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r4_1,r4_2,r4_3,r4_4,r4_5,r4_6,r4_7,r4_8','rsR4')">Reset</button>
+      <div class="res-msg" id="rsR4" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ PRÁCTICA MIXTA ═══ -->
+  <section class="sec" id="sec-mx">
+    <h2 class="sec-title">Práctica mixta · Capítulos 1 a 4</h2>
+    <p class="sec-sub">comprensión auditiva · emparejamiento · reto de registro</p>
+
+    <div class="card">
+      <div class="card-title">Escuche y escriba · Listening <span class="pill">6 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Tap 🔊 to hear a patient or family member. Listen as many times as you need, then answer. Write numbers with digits.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Buenos días. Me llamo Carmen Ruiz. Mi apellido se escribe erre, u, i, zeta.')">🔊</button> ¿Cuál es su apellido? <span class="ex-hint">(What is her last name?)</span> <input class="blk" id="r5_1" data-answer="ruiz" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Mi papá tiene setenta y dos años. Está en el piso y no puede respirar.')">🔊</button> ¿Cuántos años tiene el papá? <span class="ex-hint">(How old is the father?)</span> <input class="blk" id="r5_2" data-answer="72" data-digits="1" inputmode="numeric" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Mi número de teléfono es tres, seis, cero, cinco, cinco, cinco, cero, uno, cuatro, dos.')">🔊</button> Número de teléfono <span class="ex-hint">(Phone number, digits only)</span> <input class="blk" id="r5_3" data-answer="3605550142" data-digits="1" inputmode="numeric" placeholder="___" style="min-width:140px;"></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Doctora, me duelen mucho las rodillas. Me duelen desde hace tres días.')">🔊</button> ¿Qué le duele? <span class="ex-hint">(What hurts?)</span> <input class="blk" id="r5_4" data-answer="las rodillas|rodillas|la rodilla|rodilla" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">(Mismo audio que el número 4.) ¿Desde hace cuántos días? <span class="ex-hint">(For how many days?)</span> <input class="blk" id="r5_5" data-answer="3" data-digits="1" inputmode="numeric" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Señor, el paciente está en el cuarto doscientos catorce.')">🔊</button> ¿En qué cuarto está? <span class="ex-hint">(Which room?)</span> <input class="blk" id="r5_6" data-answer="214" data-digits="1" inputmode="numeric" placeholder="___"></span></div>
+      <button class="chk-btn" onclick="checkBlanks('r5_1,r5_2,r5_3,r5_4,r5_5,r5_6','rsR5')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r5_1,r5_2,r5_3,r5_4,r5_5,r5_6','rsR5')">Reset</button>
+      <div class="res-msg" id="rsR5" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Emparejamiento · Frases de los 4 capítulos <span class="pill">MATCHING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Click a Spanish phrase, then its English meaning. Correct pairs turn green.</p>
+      <div id="matchCont"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch()">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reto · ¿Usted, tú o ustedes? <span class="pill">12 ITEMS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Read who is in front of you and what you need to say. Choose the right register. Build your streak!</p>
+      <div class="game-wrap" id="gameWrap">
+        <div class="game-scorebar">
+          <div>Puntos<b id="gScore">0</b></div>
+          <div>Racha<b id="gStreak">0</b></div>
+          <div>Pregunta<b id="gNum">1/12</b></div>
+        </div>
+        <div class="game-prompt" id="gPrompt">—</div>
+        <div class="game-sub" id="gSub"></div>
+        <div class="game-opts" id="gOpts"></div>
+        <div class="game-feedback" id="gFb"></div>
+      </div>
+      <button class="rst-btn" style="margin-left:0;" onclick="startGame()">Restart Game</button>
+    </div>
+  </section>
+
+  <!-- ═══ EXAMEN DE PRÁCTICA ═══ -->
+  <section class="sec" id="sec-ex">
+    <h2 class="sec-title">Examen de práctica</h2>
+    <p class="sec-sub">20 preguntas de opción múltiple · 6 respuestas escritas</p>
+
+    <div class="ch-intro">
+      <div class="label">Simulacro · Practice test</div>
+      <h2>Try it like the real thing</h2>
+      <p>Five questions from each chapter. Answer all twenty without looking at your notes, then score the test and read every explanation, including the ones you got right. Then write the six short answers in complete sentences.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Parte A · Opción múltiple <span class="pill">20 PREGUNTAS</span></div>
+      <div id="examCont"></div>
+      <button class="chk-btn" onclick="checkExam()">Score the Test</button>
+      <button class="rst-btn" onclick="resetExam()">Reset</button>
+      <div class="res-msg" id="rsExam" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Parte B · Respuesta escrita <span class="pill">6 SITUACIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Write what you would say in each situation. Use complete sentences; accents are optional for grading.</p>
+      <div id="shortCont"></div>
+      <button class="chk-btn" onclick="checkShort()">Check Answers</button>
+      <button class="rst-btn" onclick="resetShort()">Reset</button>
+      <div class="res-msg" id="rs7" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ EXAMEN ORAL ═══ -->
+  <section class="sec" id="sec-or">
+    <h2 class="sec-title">Práctica para el examen oral</h2>
+    <p class="sec-sub">una visita completa · juegos de rol · autoevaluación</p>
+
+    <div class="card">
+      <div class="card-title">Modelo · Una visita completa <span class="pill">CAPS. 1 A 4</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:10px;">Listen to a full visit that uses all four chapters. Then read it aloud with a partner, switching roles.</p>
+      <button class="chk-btn" style="margin-top:4px;" onclick="playDialogue()">🔊 Play dialogue</button>
+      <button class="rst-btn" onclick="stopSpeech()">■ Stop</button>
+      <div class="dlg" id="dlgBox"></div>
+    </div>
+
+    <div class="gbox">
+      <h3><span class="num">ORAL</span>Juegos de rol</h3>
+      <p class="sub">A plays the health worker, B plays the patient; then switch. Tap 🔊 to hear a model answer, and check the box when you can do it without looking.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Buenos días, señora. Me llamo Ana y soy su enfermera. ¿Cómo se llama usted? ¿Cómo se escribe su apellido?')">🔊</button> Greet a new patient, introduce yourself, and ask her name and how to spell her last name. <label class="oral-check"><input type="checkbox" id="oc0"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('¿De dónde es usted? ¿Cuántos años tiene? ¿Habla usted inglés?')">🔊</button> Ask where the patient is from, how old he is, and if he speaks English. <label class="oral-check"><input type="checkbox" id="oc1"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Con permiso. Pase, por favor. Siéntese aquí y llene este formulario.')">🔊</button> Bring the patient into the exam room with three polite instructions. <label class="oral-check"><input type="checkbox" id="oc2"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Necesito una ambulancia. Mi papá está en el piso y no puede respirar. Tiene setenta y seis años. Estamos en la calle Pine, número cuarenta y cinco.')">🔊</button> You are a family member: call 911, describe the emergency, and give the age and address. <label class="oral-check"><input type="checkbox" id="oc3"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('¿Dónde le duele? ¿Desde cuándo? ¿Cómo es el dolor? Del uno al diez, ¿cuánto le duele?')">🔊</button> Ask about the patient's pain: where, since when, what it's like, and how much. <label class="oral-check"><input type="checkbox" id="oc4"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Me duele mucho la espalda, abajo, en el lado derecho. Me duele desde ayer. Es un dolor agudo. Es un ocho.')">🔊</button> You are the patient: describe your pain (where, since when, what kind, how much). <label class="oral-check"><input type="checkbox" id="oc5"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Mateo, abre la boca, por favor. ¿Te duele la garganta? Muy bien. No te muevas.')">🔊</button> Talk to a seven-year-old (tú): give two instructions and ask if something hurts. <label class="oral-check"><input type="checkbox" id="oc6"> Lo puedo hacer</label></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text"><button type="button" class="play-btn" onclick="speak('Muchas gracias, señora. Que se mejore. Cuídese.')">🔊</button> End the visit politely with a formal farewell. <label class="oral-check"><input type="checkbox" id="oc7"> Lo puedo hacer</label></span></div>
+    </div>
+
+    <div class="ojo"><div class="ojo-title">Consejo · Tips for the oral exam</div><p>Start every interaction with a greeting and your name. Use <em>usted</em> with adults and <em>tú</em> with children. If you don't understand, say <em>¿Puede repetir, por favor?</em> or <em>Más despacio, por favor.</em> Repeat numbers back to confirm: <em>¿Sesenta o setenta?</em></p></div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish for Healthcare Workers · Repaso para el examen parcial · Capítulos 1 a 4
+  </div>
+
+</div>
+
+<script>
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('active'); });
+  if(el){ el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  var s = document.getElementById('sec-'+tab); if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Helpers ── */
+function normalize(s){ if(!s) return ''; return s.toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[¿?¡!.,;:]/g,'').replace(/\s+/g,' ').trim(); }
+function wordsOf(str){ return normalize(str).split(/\s+/).filter(Boolean); }
+function val(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+function setMsg(id, ok, text){ var m=document.getElementById(id); if(!m) return; m.textContent=text; m.className='res-msg '+(ok?'ok':'ng'); }
+function showFb(id, ok, msg){ var fb=document.getElementById(id); if(!fb) return; fb.className='task-fb show '+(ok?'ok':'ng'); fb.textContent=(ok?'✓ ':'✗ ')+msg; }
+function clearFb(id){ var fb=document.getElementById(id); if(fb) fb.className='task-fb'; }
+function answersOf(el){ return (el.getAttribute('data-answer')||'').split('|'); }
+function isRight(el){ if(el.getAttribute('data-digits')){ var d=(el.value||'').replace(/\D/g,''); return !!d && d===el.getAttribute('data-answer'); } var v=normalize(el.value); return !!v && answersOf(el).some(function(a){ return normalize(a)===v; }); }
+
+/* ── Speech (device Spanish voice) ── */
+var esVoice = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = window.speechSynthesis.getVoices(), pref = ['es-MX','es-US','es-419','es-CO','es-ES'];
+  for(var p=0;p<pref.length;p++){ for(var i=0;i<vs.length;i++){ if(vs[i].lang && vs[i].lang.replace('_','-')===pref[p]){ esVoice=vs[i]; return; } } }
+  for(var j=0;j<vs.length;j++){ if(vs[j].lang && vs[j].lang.toLowerCase().indexOf('es')===0){ esVoice=vs[j]; return; } }
+}
+if('speechSynthesis' in window){ pickVoice(); window.speechSynthesis.onvoiceschanged = pickVoice; }
+function utter(text, rate){
+  var u = new SpeechSynthesisUtterance(text.replace(/…/g,''));
+  u.lang = esVoice ? esVoice.lang : 'es-MX'; if(esVoice) u.voice = esVoice; u.rate = rate || 0.9;
+  return u;
+}
+function speak(texts){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    (Array.isArray(texts)?texts:[texts]).forEach(function(t){ if(t) window.speechSynthesis.speak(utter(t)); });
+  }catch(e){}
+}
+function stopSpeech(){ try{ window.speechSynthesis.cancel(); }catch(e){} }
+
+/* ── Flashcards ── */
+
+function buildFlash(list, containerId, extraClass){
+  var c = document.getElementById(containerId);
+  list.forEach(function(v){
+    var card = document.createElement('div');
+    card.className = 'vocab-card' + (extraClass ? ' '+extraClass : '');
+    card.setAttribute('role','button');
+    card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label', v.es + '. Flip to see the translation and hear the pronunciation.');
+    card.innerHTML = '<div class="vocab-card-inner"><div class="vocab-front">'+v.es+'<small>'+v.note+'</small><span class="vocab-sound" aria-hidden="true">🔊</span>' +
+      '</div><div class="vocab-back">'+v.en + (v.ex ? '<span class="vocab-ex">'+v.ex+'</span>' : '') +
+      '<button type="button" class="vocab-replay" aria-label="Play again: ' + v.es.replace(/"/g,'&quot;') + '">🔊</button></div></div>';
+    function flip(){ var nowFlipped = card.classList.toggle('flipped'); if(nowFlipped) speak([v.es, v.ex]); }
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); flip(); } });
+    card.querySelector('.vocab-replay').addEventListener('click', function(e){ e.stopPropagation(); speak([v.es, v.ex]); });
+    c.appendChild(card);
+  });
+}
+
+
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(','), correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.classList.remove('ok','ng');
+    if(isRight(el)){ el.classList.add('ok'); correct++; } else el.classList.add('ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct===total){ msg.textContent='¡Perfecto! '+correct+' / '+total+' correctas. ✓'; msg.className='res-msg ok'; }
+    else { msg.textContent=correct+' / '+total+' correctas. Revisa las marcadas en rojo.'; msg.className='res-msg ng'; }
+  }
+  updateCompletion();
+}
+function resetBlanks(idsCSV, resultId){
+  idsCSV.split(',').forEach(function(id){ var el=document.getElementById(id); if(el){ el.value=''; el.classList.remove('ok','ng'); } });
+  var msg=document.getElementById(resultId); if(msg){ msg.textContent=''; msg.className='res-msg'; }
+  updateCompletion();
+}
+
+/* ── Multiple-choice engine ── */
+var quizState = {}, MC_SETS = {};
+function buildMC(data, key, containerId){
+  var container = document.getElementById(containerId); if(!container) return;
+  container.innerHTML = '';
+  quizState[key] = data.map(function(){ return null; }); MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'quiz-item'; div.id = key+'_item_'+i;
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="'+key+'_'+i+'_'+j+'" onclick="pickMC(\''+key+'\','+i+','+j+')"><span class="letter">'+'ABCD'[j]+'</span><span>'+opt+'</span></button>';
+    }).join('');
+    div.innerHTML = '<div class="quiz-q"><span class="qnum">'+(i+1)+'.</span>'+item.q+'</div><div class="quiz-gloss">'+item.gloss+'</div><div class="quiz-options">'+opts+'</div><div class="quiz-explain" id="'+key+'_exp_'+i+'"></div>';
+    container.appendChild(div);
+  });
+}
+function pickMC(key, i, j){
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){ document.getElementById(key+'_'+i+'_'+k).classList.toggle('selected', k===j); });
+  updateCompletion();
+}
+function revealMC(key, i){
+  var item = MC_SETS[key][i], chosen = quizState[key][i], ok = chosen===item.answer;
+  item.options.forEach(function(_, j){ var btn=document.getElementById(key+'_'+i+'_'+j); btn.classList.remove('is-correct','is-wrong'); if(j===item.answer) btn.classList.add('is-correct'); else if(j===chosen) btn.classList.add('is-wrong'); });
+  var exp = document.getElementById(key+'_exp_'+i); exp.className='quiz-explain show';
+  exp.innerHTML = '<strong>'+(ok?'✓ ¡Correcto!':'✗ No exactamente.')+'</strong> '+item.explain;
+  document.getElementById(key+'_item_'+i).className='quiz-item '+(ok?'correct':'wrong');
+  return ok;
+}
+function resetMC(key){
+  var data = MC_SETS[key]; quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){ item.options.forEach(function(_, j){ document.getElementById(key+'_'+i+'_'+j).className='quiz-opt'; }); document.getElementById(key+'_exp_'+i).className='quiz-explain'; document.getElementById(key+'_item_'+i).className='quiz-item'; });
+}
+
+
+var mSelEs = null, mSelEn = null, mMatched = 0, matchDone = false;
+function buildMatch(){
+  var c = document.getElementById('matchCont');
+  var order = matchData.map(function(_, i){ return i; });
+  for(var k=order.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=order[k]; order[k]=order[r]; order[r]=t; }
+  var esHtml = matchData.map(function(m, i){ return '<div class="mi" id="mes-'+i+'" data-idx="'+i+'" onclick="selSpanish(this)">'+(i+1)+'. '+m.es+'</div>'; }).join('');
+  var enHtml = order.map(function(idx){ return '<div class="mi" id="men-'+idx+'" data-idx="'+idx+'" onclick="selEnglish(this)">'+matchData[idx].en+'</div>'; }).join('');
+  c.innerHTML = '<div class="match-cols"><div><div class="match-col-label">Español</div>'+esHtml+'</div><div><div class="match-col-label">English</div>'+enHtml+'</div></div>';
+  mSelEs=null; mSelEn=null; mMatched=0; matchDone=false;
+  document.getElementById('rsMatch').textContent=''; document.getElementById('rsMatch').className='res-msg';
+  updateCompletion();
+}
+function selSpanish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=mes-]').forEach(function(i){ i.classList.remove('sel'); }); el.classList.add('sel'); mSelEs=el; tryMatch(); }
+function selEnglish(el){ if(el.classList.contains('done')) return; document.querySelectorAll('#matchCont .mi[id^=men-]').forEach(function(i){ i.classList.remove('sel','bad'); }); el.classList.add('sel'); mSelEn=el; tryMatch(); }
+function tryMatch(){
+  if(!mSelEs || !mSelEn) return;
+  if(mSelEs.dataset.idx === mSelEn.dataset.idx){
+    mSelEs.classList.remove('sel'); mSelEs.classList.add('done'); mSelEn.classList.remove('sel'); mSelEn.classList.add('done'); mMatched++;
+    if(mMatched===matchData.length){ matchDone=true; setMsg('rsMatch', true, '¡Excelente! Emparejaste las '+mMatched+' frases. ✓'); }
+  } else { var bad=mSelEn; bad.classList.add('bad'); setTimeout(function(){ bad.classList.remove('bad','sel'); }, 700); }
+  mSelEs=null; mSelEn=null; updateCompletion();
+}
+
+
+function buildShort(){
+  var c = document.getElementById('shortCont');
+  c.innerHTML = shortData.map(function(s, i){
+    return '<div style="margin-bottom:14px;"><div style="font-size:0.92rem;font-weight:700;color:var(--navy);">'+(i+1)+'. '+s.q+' <span style="font-weight:400;color:var(--text-hint);font-style:italic;font-size:0.82rem;">'+s.gloss+'</span></div><input class="task-input" id="sa'+i+'" placeholder="Escribe tu respuesta…" autocomplete="off"><div class="task-fb" id="fbsa'+i+'"></div></div>';
+  }).join('');
+}
+function gradeShort(i){
+  var s = shortData[i], v = val('sa'+i), w = wordsOf(v);
+  if(!v) return { ok:false, msg:'Escribe tu respuesta.' };
+  if(w.length < s.minW) return { ok:false, msg:'Escribe una oración completa (mínimo '+s.minW+' palabras).' };
+  var has = function(k){ return w.indexOf(normalize(k)) !== -1; };
+  if(s.all && !s.all.every(has)) return { ok:false, msg:s.hint };
+  if(s.any && !s.any.some(has)) return { ok:false, msg:s.hint };
+  return { ok:true, msg:'¡Bien! Oración completa.' };
+}
+function checkShort(){
+  var correct = 0;
+  shortData.forEach(function(_, i){ var r=gradeShort(i); document.getElementById('sa'+i).style.borderBottomColor = r.ok?'var(--sage)':'var(--terracotta)'; showFb('fbsa'+i, r.ok, r.msg); if(r.ok) correct++; });
+  setMsg('rs7', correct===shortData.length, correct+' / '+shortData.length+' respuestas válidas.');
+  updateCompletion();
+}
+function resetShort(){
+  shortData.forEach(function(_, i){ var el=document.getElementById('sa'+i); el.value=''; el.style.borderBottomColor=''; clearFb('fbsa'+i); });
+  document.getElementById('rs7').className='res-msg'; document.getElementById('rs7').textContent=''; updateCompletion();
+}
+
+
+var gIdx=0, gScore=0, gStreak=0, gFinished=false, gLock=false;
+function startGame(){
+  gIdx=0; gScore=0; gStreak=0; gFinished=false; gLock=false;
+  document.getElementById('gScore').textContent='0'; document.getElementById('gStreak').textContent='0';
+  document.getElementById('gFb').textContent=''; document.getElementById('gFb').className='game-feedback';
+  showGameQ(); updateCompletion();
+}
+function showGameQ(){
+  var q = gameData[gIdx];
+  document.getElementById('gNum').textContent = (gIdx+1)+'/'+gameData.length;
+  document.getElementById('gPrompt').textContent = q.n;
+  document.getElementById('gSub').textContent = 'Choose what you would say to this person.';
+  var opts = q.o.slice();
+  for(var k=opts.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=opts[k]; opts[k]=opts[r]; opts[r]=t; }
+  document.getElementById('gOpts').innerHTML = opts.map(function(o){ return '<button type="button" class="game-opt" onclick="pickGame(this,\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>'; }).join('');
+  gLock=false;
+}
+function pickGame(el, choice){
+  if(gLock) return; gLock=true;
+  var q = gameData[gIdx], fb = document.getElementById('gFb');
+  var ok = choice === q.a;
+  document.querySelectorAll('#gOpts .game-opt').forEach(function(b){ if(b.textContent===q.a) b.classList.add('is-correct'); });
+  if(ok){ gScore++; gStreak++; fb.textContent='✓ ¡Correcto! '+q.a.charAt(0).toUpperCase()+q.a.slice(1)+'.'; fb.className='game-feedback ok'; speak(q.a); }
+  else { gStreak=0; el.classList.add('is-wrong'); fb.textContent='✗ Correct answer: '+q.a+'.'; fb.className='game-feedback ng'; }
+  document.getElementById('gScore').textContent=gScore; document.getElementById('gStreak').textContent=gStreak;
+  setTimeout(function(){
+    gIdx++;
+    if(gIdx < gameData.length){ showGameQ(); }
+    else { gFinished=true; document.getElementById('gPrompt').innerHTML='<span class="game-done">¡Fin! '+gScore+' / '+gameData.length+'</span>'; document.getElementById('gSub').textContent = gScore===gameData.length?'¡Perfecto! Dominas usted, tú y ustedes.':'Pulsa "Restart Game" para intentarlo de nuevo.'; document.getElementById('gOpts').innerHTML=''; document.getElementById('gNum').textContent=gameData.length+'/'+gameData.length; }
+    updateCompletion();
+  }, 950);
+}
+
+
+function escapeHtml(str){ return (str==null?'':String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function stripTags(html){ var dv=document.createElement('div'); dv.innerHTML=html||''; return (dv.textContent||'').replace(/\s+/g,' ').trim(); }
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){ return '<tr class="'+(it.value?(it.ok?'ok':'bad'):'blank')+'"><td class="num">'+escapeHtml(it.label)+'</td><td>'+(it.value?escapeHtml(it.value):'<span class="blanktxt">(en blanco)</span>')+'</td><td class="note">'+escapeHtml(it.msg||'')+'</td><td class="mark">'+(it.value?(it.ok?'✓':'✗'):'—')+'</td></tr>'; }).join('');
+    return '<h3>'+escapeHtml(g.heading)+'</h3><table><tbody>'+rows+'</tbody></table>';
+  }).join('');
+  return '<h2>'+escapeHtml(title)+'<span class="score">'+escapeHtml(scoreText)+'</span></h2>'+blocks;
+}
+function collectBlanks(prefix, n, heading){
+  var items=[], correct=0;
+  for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(!el) continue; var v=(el.value||'').trim(); var ok=isRight(el); if(ok) correct++; items.push({ label:String(i), value:v, ok:ok, msg: ok?'Correcto.':'Respuesta: '+answersOf(el).join(' / ') }); }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+function mcReport(data, key){
+  return data.map(function(item, i){ var ch=quizState[key][i]; return { label:String(i+1), value: ch===null?'':stripTags(item.options[ch]), ok: ch===item.answer, msg: ch===item.answer?'Correcto.':'Correcta: '+stripTags(item.options[item.answer]) }; });
+}
+
+/* ── Vocabulary (Capítulos 1 a 4) ── */
+var vocabGreet = [
+  {es:'Hola', note:'informal', en:'Hi / Hello'},
+  {es:'Buenos días', note:'formal · a.m.', en:'Good morning'},
+  {es:'Buenas tardes', note:'formal · p.m.', en:'Good afternoon'},
+  {es:'Buenas noches', note:'formal · noche', en:'Good evening / Good night'},
+  {es:'¿Cómo está usted?', note:'formal', en:'How are you?'},
+  {es:'¿Cómo estás?', note:'informal', en:'How are you?'},
+  {es:'¿Qué tal?', note:'informal', en:"How's it going?"},
+  {es:'Mucho gusto', note:'presentación', en:'Nice to meet you'},
+  {es:'Igualmente', note:'respuesta', en:'Likewise / Same here'},
+  {es:'Adiós', note:'despedida', en:'Goodbye'},
+  {es:'Hasta luego', note:'despedida', en:'See you later'},
+  {es:'Hasta mañana', note:'despedida', en:'See you tomorrow'},
+  {es:'Cuídese', note:'formal · salida', en:'Take care'},
+  {es:'Que se mejore', note:'formal · salud', en:'Get well soon'}
+];
+var vocabPhrases = [
+  {es:'¿Cómo se dice…?', note:'clase', en:'How do you say…?'},
+  {es:'¿Qué significa…?', note:'clase', en:'What does… mean?'},
+  {es:'No entiendo', note:'clase · clínica', en:"I don't understand"},
+  {es:'¿Puede repetir?', note:'formal', en:'Can you repeat?'},
+  {es:'Más despacio, por favor', note:'formal', en:'Slower, please'},
+  {es:'¿Cómo se escribe?', note:'admisión', en:'How do you spell it?'},
+  {es:'Un momento, por favor', note:'formal', en:'One moment, please'},
+  {es:'¿Habla usted inglés?', note:'clínica', en:'Do you speak English?'},
+  {es:'Necesito un intérprete', note:'clínica', en:'I need an interpreter'},
+  {es:'¿En qué puedo ayudarle?', note:'formal', en:'How can I help you?'}
+];
+var FLASH_EX = {"greet": ["Hola, me llamo Ana.", "Buenos días, señora López.", "Buenas tardes, doctor.", "Buenas noches, señor Pérez.", "Buenos días, señor. ¿Cómo está usted?", "Hola, Carlos. ¿Cómo estás?", "Hola, María. ¿Qué tal?", "Mucho gusto, soy la enfermera Ruiz.", "Mucho gusto. Igualmente.", "Adiós, doctora.", "Hasta luego, señor García.", "Hasta mañana, doctor.", "Cuídese mucho, señora.", "Que se mejore pronto, señor."], "phrases": ["¿Cómo se dice esto en español?", "¿Qué significa «receta»?", "Perdón, no entiendo.", "¿Puede repetir, por favor?", "Hable más despacio, por favor.", "¿Cómo se escribe su apellido?", "Un momento, por favor. El doctor viene.", "Perdón, ¿habla usted inglés?", "Por favor, necesito un intérprete.", "Buenos días. ¿En qué puedo ayudarle?"]};
+var vocabCourtesy = [
+  {es:'Por favor', note:'cortesía', en:'Please', ex:'Siéntese aquí, por favor.'},
+  {es:'Gracias', note:'cortesía', en:'Thank you', ex:'Gracias por esperar.'},
+  {es:'Muchas gracias', note:'cortesía', en:'Thank you very much', ex:'Muchas gracias, doctora.'},
+  {es:'De nada', note:'respuesta', en:"You're welcome", ex:'Gracias, enfermero. De nada.'},
+  {es:'Con mucho gusto', note:'respuesta · Centroamérica', en:"You're welcome / Gladly", ex:'Gracias por su ayuda. Con mucho gusto.'},
+  {es:'Con permiso', note:'antes de una acción', en:'Excuse me / May I?', ex:'Con permiso, voy a tomarle la presión.'},
+  {es:'Disculpe', note:'formal · atención', en:'Excuse me', ex:'Disculpe, ¿es usted la señora Ruiz?'},
+  {es:'Perdón', note:'pequeño error', en:'Pardon / Sorry', ex:'Perdón, ¿cómo dijo?'},
+  {es:'Lo siento', note:'disculpa', en:"I'm sorry", ex:'Lo siento, el doctor está ocupado.'},
+  {es:'Lo siento mucho', note:'compasión', en:"I'm very sorry", ex:'Lo siento mucho, señora.'},
+  {es:'Muy amable', note:'agradecimiento', en:'Very kind (of you)', ex:'Gracias, es usted muy amable.'},
+  {es:'Pase adelante', note:'Centroamérica', en:'Come on in', ex:'Buenos días, pase adelante.'}
+];
+var vocabCare = [
+  {es:'Pase', note:'pasar', en:'Come in', ex:'Pase, por favor. El doctor lo espera.'},
+  {es:'Siéntese', note:'sentarse', en:'Sit down', ex:'Siéntese aquí, por favor.'},
+  {es:'Espere aquí', note:'esperar', en:'Wait here', ex:'Espere aquí un momento.'},
+  {es:'Respire profundo', note:'respirar', en:'Take a deep breath', ex:'Respire profundo por la boca.'},
+  {es:'Aguante la respiración', note:'aguantar', en:'Hold your breath', ex:'Aguante la respiración. Ahora respire.'},
+  {es:'Firme aquí', note:'firmar', en:'Sign here', ex:'Firme aquí, por favor.'},
+  {es:'Acuéstese', note:'acostarse', en:'Lie down', ex:'Acuéstese en la camilla.'},
+  {es:'Levántese', note:'levantarse', en:'Stand up', ex:'Levántese despacio, por favor.'},
+  {es:'Relájese', note:'relajarse', en:'Relax', ex:'Relájese, todo está bien.'},
+  {es:'Abra la boca', note:'abrir', en:'Open your mouth', ex:'Abra la boca y diga "a".'},
+  {es:'Tome la medicina', note:'tomar', en:'Take the medicine', ex:'Tome la medicina con comida.'},
+  {es:'Llene este formulario', note:'llenar', en:'Fill out this form', ex:'Llene este formulario, por favor.'},
+  {es:'No se mueva', note:'negativo', en:"Don't move", ex:'No se mueva, por favor.'},
+  {es:'No coma nada', note:'negativo', en:"Don't eat anything", ex:'No coma nada después de medianoche.'}
+];
+var vocabDental = [
+  {es:'el diente', note:'sustantivo', en:'tooth', ex:'Tiene un diente roto.'},
+  {es:'la muela', note:'sustantivo', en:'molar (back tooth)', ex:'Me duele esta muela.'},
+  {es:'la encía', note:'sustantivo', en:'gum', ex:'Le sangran las encías.'},
+  {es:'la caries', note:'sustantivo', en:'cavity', ex:'Tiene una caries pequeña.'},
+  {es:'la limpieza', note:'sustantivo', en:'cleaning', ex:'Necesita una limpieza.'},
+  {es:'la anestesia', note:'sustantivo', en:'anesthesia', ex:'Voy a ponerle anestesia.'},
+  {es:'la boca', note:'cuerpo', en:'mouth', ex:'Abra la boca, por favor.'},
+  {es:'la lengua', note:'cuerpo', en:'tongue', ex:'Saque la lengua.'},
+  {es:'la muela del juicio', note:'sustantivo', en:'wisdom tooth', ex:'Hay que sacar la muela del juicio.'},
+  {es:'el cepillo de dientes', note:'higiene', en:'toothbrush', ex:'Use un cepillo de dientes suave.'},
+  {es:'el hilo dental', note:'higiene', en:'dental floss', ex:'Use hilo dental todos los días.'},
+  {es:'masticar', note:'verbo', en:'to chew', ex:'¿Le duele al masticar?'}
+];
+var vocabEmerg = [
+  {es:'la emergencia', note:'sustantivo', en:'emergency', ex:'¡Es una emergencia!'},
+  {es:'la ambulancia', note:'sustantivo', en:'ambulance', ex:'Necesito una ambulancia.'},
+  {es:'la ayuda', note:'sustantivo', en:'help', ex:'¿Necesita ayuda, señora?'},
+  {es:'¡Socorro!', note:'grito · también ¡Auxilio!', en:'Help!', ex:'¡Socorro! ¡Mi papá no respira!'},
+  {es:'el dolor', note:'sustantivo', en:'pain', ex:'Tengo mucho dolor de pecho.'},
+  {es:'la sangre', note:'sustantivo', en:'blood', ex:'Hay mucha sangre.'},
+  {es:'el accidente', note:'sustantivo', en:'accident', ex:'Hay un accidente en la carretera.'},
+  {es:'la herida', note:'sustantivo', en:'wound', ex:'Tiene una herida en la cabeza.'},
+  {es:'la caída', note:'sustantivo', en:'fall', ex:'Mi abuela tuvo una caída.'},
+  {es:'la quemadura', note:'sustantivo', en:'burn', ex:'El niño tiene una quemadura en la mano.'},
+  {es:'el ataque al corazón', note:'también: el infarto', en:'heart attack', ex:'Es un ataque al corazón.'},
+  {es:'el derrame cerebral', note:'sustantivo', en:'stroke', ex:'Mi esposo tuvo un derrame cerebral.'},
+  {es:'inconsciente', note:'adjetivo · con estar', en:'unconscious', ex:'El señor está inconsciente.'},
+  {es:'los paramédicos', note:'personas', en:'paramedics', ex:'Los paramédicos vienen en camino.'},
+  {es:'la sala de emergencias', note:'también: urgencias', en:'emergency room', ex:'Vaya a la sala de emergencias.'},
+  {es:'urgente', note:'adjetivo', en:'urgent', ex:'Es urgente, por favor.'}
+];
+var vocabHelp = [
+  {es:'Llame al 911', note:'pedir ayuda', en:'Call 911', ex:'Llame al nueve, uno, uno, por favor.'},
+  {es:'¿Necesita ayuda?', note:'ofrecer ayuda', en:'Do you need help?', ex:'Señor, ¿necesita ayuda?'},
+  {es:'Es urgente', note:'pedir ayuda', en:"It's urgent", ex:'Es urgente. Mi hijo no puede respirar.'},
+  {es:'Necesito una ambulancia', note:'pedir ayuda', en:'I need an ambulance', ex:'Necesito una ambulancia en la calle Pine.'},
+  {es:'¿Qué pasó?', note:'pregunta', en:'What happened?', ex:'Cálmese. ¿Qué pasó?'},
+  {es:'¿Dónde le duele?', note:'pregunta', en:'Where does it hurt?', ex:'Señora, ¿dónde le duele?'},
+  {es:'¿Puede respirar?', note:'pregunta', en:'Can you breathe?', ex:'¿Puede respirar bien?'},
+  {es:'Cálmese', note:'mandato', en:'Calm down', ex:'Cálmese y hable despacio.'},
+  {es:'No cuelgue', note:'mandato · teléfono', en:"Don't hang up", ex:'No cuelgue, por favor.'},
+  {es:'La ambulancia viene en camino', note:'calmar', en:'The ambulance is on its way', ex:'No se preocupe. La ambulancia viene en camino.'},
+  {es:'Estoy aquí para ayudarle', note:'ofrecer ayuda', en:"I'm here to help you", ex:'Soy enfermero. Estoy aquí para ayudarle.'},
+  {es:'Quédese conmigo', note:'mandato', en:'Stay with me', ex:'Quédese conmigo, señor.'}
+];
+var vocabFlight = [
+  {es:'el helicóptero', note:'transporte', en:'helicopter', ex:'El helicóptero llega en diez minutos.'},
+  {es:'el avión ambulancia', note:'transporte', en:'air ambulance (plane)', ex:'El avión ambulancia va a Seattle.'},
+  {es:'la camilla', note:'equipo', en:'stretcher', ex:'Vamos a ponerlo en la camilla.'},
+  {es:'el oxígeno', note:'equipo', en:'oxygen', ex:'Voy a ponerle oxígeno.'},
+  {es:'los signos vitales', note:'medicina', en:'vital signs', ex:'Voy a revisar sus signos vitales.'},
+  {es:'el traslado', note:'sustantivo', en:'transfer / transport', ex:'El traslado dura quince minutos.'},
+  {es:'el cinturón de seguridad', note:'equipo', en:'seat belt', ex:'Voy a ponerle el cinturón de seguridad.'},
+  {es:'la mascarilla', note:'equipo', en:'mask', ex:'Respire normal con la mascarilla.'},
+  {es:'el suero', note:'medicina', en:'IV fluids', ex:'Voy a ponerle un suero.'},
+  {es:'los audífonos', note:'equipo', en:'headset', ex:'Póngase los audífonos, por favor.'},
+  {es:'la UCI', note:'unidad de cuidados intensivos', en:'ICU', ex:'Vamos a la UCI del hospital.'},
+  {es:'el ruido', note:'sustantivo', en:'noise', ex:'Va a escuchar mucho ruido.'}
+];
+var numberWords = [[0,'cero'],[1,'uno'],[2,'dos'],[3,'tres'],[4,'cuatro'],[5,'cinco'],[6,'seis'],[7,'siete'],[8,'ocho'],[9,'nueve'],[10,'diez'],
+  [11,'once'],[12,'doce'],[13,'trece'],[14,'catorce'],[15,'quince'],[16,'dieciséis'],[17,'diecisiete'],[18,'dieciocho'],[19,'diecinueve'],[20,'veinte'],
+  [21,'veintiuno'],[22,'veintidós'],[30,'treinta'],[31,'treinta y uno'],[40,'cuarenta'],[50,'cincuenta'],[60,'sesenta'],[70,'setenta'],[80,'ochenta'],[90,'noventa'],[100,'cien']];
+function buildNumbers(){
+  var c = document.getElementById('numGrid'); if(!c) return;
+  numberWords.forEach(function(n){
+    var b = document.createElement('button'); b.type='button'; b.className='alpha-cell num-cell';
+    b.setAttribute('aria-label', n[0]+': '+n[1]);
+    b.innerHTML = '<span class="ltr">'+n[0]+'</span><span class="nm">'+n[1]+'</span>';
+    b.addEventListener('click', function(){ speak(n[1]); });
+    c.appendChild(b);
+  });
+}
+var vocabHead = [
+  {es:'la cabeza', note:'cabeza', en:'head', ex:'Me duele la cabeza.'},
+  {es:'la cara', note:'cabeza', en:'face', ex:'Tiene una herida en la cara.'},
+  {es:'los ojos', note:'cabeza · plural', en:'eyes', ex:'Me duelen los ojos.'},
+  {es:'los oídos', note:'por dentro · las orejas: por fuera', en:'ears (inner)', ex:'A la niña le duelen los oídos.'},
+  {es:'la nariz', note:'cabeza', en:'nose', ex:'Le sangra la nariz.'},
+  {es:'la boca', note:'cabeza', en:'mouth', ex:'Abra la boca, por favor.'},
+  {es:'la garganta', note:'cuello', en:'throat', ex:'Me duele la garganta cuando como.'},
+  {es:'el cuello', note:'cuello', en:'neck', ex:'No mueva el cuello, por favor.'},
+  {es:'el pecho', note:'tronco', en:'chest', ex:'Tengo dolor de pecho.'},
+  {es:'el estómago', note:'tronco · también: la barriga', en:'stomach', ex:'Le duele el estómago.'},
+  {es:'la espalda', note:'tronco', en:'back', ex:'Me duele la espalda, abajo.'},
+  {es:'el corazón', note:'órgano', en:'heart', ex:'Voy a escuchar el corazón.'}
+];
+var vocabLimbs = [
+  {es:'el hombro', note:'brazo', en:'shoulder', ex:'Me duele el hombro derecho.'},
+  {es:'el brazo', note:'brazo', en:'arm', ex:'Levante el brazo, por favor.'},
+  {es:'el codo', note:'brazo', en:'elbow', ex:'Se golpeó el codo.'},
+  {es:'la muñeca', note:'brazo', en:'wrist', ex:'Tiene la muñeca hinchada.'},
+  {es:'la mano', note:'femenino · ¡termina en -o!', en:'hand', ex:'Apriete mi mano.'},
+  {es:'los dedos', note:'mano · pie', en:'fingers / toes', ex:'¿Puede mover los dedos?'},
+  {es:'la cadera', note:'pierna', en:'hip', ex:'Mi abuela se cayó y le duele la cadera.'},
+  {es:'la pierna', note:'pierna', en:'leg', ex:'Le duele la pierna izquierda.'},
+  {es:'la rodilla', note:'pierna', en:'knee', ex:'Me duelen las rodillas.'},
+  {es:'el tobillo', note:'pierna', en:'ankle', ex:'Tiene el tobillo hinchado.'},
+  {es:'el pie', note:'pierna', en:'foot', ex:'Me duelen los pies.'},
+  {es:'la piel', note:'el cuerpo', en:'skin', ex:'Tiene una quemadura en la piel.'}
+];
+var vocabPain = [
+  {es:'Me duele…', note:'una cosa', en:'My … hurts', ex:'Me duele la cabeza.'},
+  {es:'Me duelen…', note:'dos o más cosas', en:'My … hurt', ex:'Me duelen los pies.'},
+  {es:'¿Le duele?', note:'a un paciente', en:'Does it hurt (you)?', ex:'¿Le duele aquí?'},
+  {es:'¿Dónde le duele?', note:'pregunta', en:'Where does it hurt?', ex:'Señora, ¿dónde le duele?'},
+  {es:'¿Desde cuándo?', note:'pregunta', en:'Since when?', ex:'¿Desde cuándo le duele?'},
+  {es:'desde ayer', note:'tiempo', en:'since yesterday', ex:'Me duele desde ayer.'},
+  {es:'desde hace dos días', note:'tiempo', en:'for two days', ex:'Le duele desde hace dos días.'},
+  {es:'Tengo dolor de…', note:'con tener', en:'I have a … ache', ex:'Tengo dolor de espalda.'},
+  {es:'un dolor agudo', note:'tipo', en:'a sharp pain', ex:'Es un dolor agudo.'},
+  {es:'un dolor sordo', note:'tipo', en:'a dull pain', ex:'Es un dolor sordo y constante.'},
+  {es:'el lado derecho', note:'ubicación', en:'the right side', ex:'Me duele el lado derecho.'},
+  {es:'Muéstreme dónde le duele', note:'mandato', en:'Show me where it hurts', ex:'Muéstreme dónde le duele, por favor.'}
+];
+var vocabTrauma = [
+  {es:'la herida', note:'trauma', en:'wound', ex:'Tiene una herida en la cabeza.'},
+  {es:'la fractura', note:'trauma · clínico', en:'fracture', ex:'Creo que es una fractura.'},
+  {es:'el hueso roto', note:'trauma · coloquial', en:'broken bone', ex:'¿Tengo un hueso roto?'},
+  {es:'la quemadura', note:'trauma', en:'burn', ex:'Tiene una quemadura en la mano.'},
+  {es:'el sangrado', note:'trauma', en:'bleeding', ex:'Hay mucho sangrado.'},
+  {es:'el golpe en la cabeza', note:'trauma', en:'blow to the head', ex:'¿Tiene un golpe en la cabeza?'},
+  {es:'la venda', note:'tratamiento', en:'bandage', ex:'Voy a ponerle una venda.'},
+  {es:'el yeso', note:'tratamiento', en:'cast', ex:'Va a necesitar un yeso.'},
+  {es:'la radiografía', note:'prueba', en:'X-ray', ex:'Vamos a tomar una radiografía.'},
+  {es:'el moretón', note:'trauma', en:'bruise', ex:'Tiene un moretón en el brazo.'},
+  {es:'hinchado / hinchada', note:'adjetivo', en:'swollen', ex:'El tobillo está hinchado.'},
+  {es:'el casco', note:'prevención', en:'helmet', ex:'¿Usa casco en la bicicleta?'}
+];
+
+/* ── Merge chapter 1 example sentences ── */
+(function(){
+  if(typeof FLASH_EX === 'undefined') return;
+  vocabGreet.forEach(function(v, i){ if(FLASH_EX.greet && FLASH_EX.greet[i]) v.ex = FLASH_EX.greet[i]; });
+  vocabPhrases.forEach(function(v, i){ if(FLASH_EX.phrases && FLASH_EX.phrases[i]) v.ex = FLASH_EX.phrases[i]; });
+})();
+
+/* ── Model visit dialogue ── */
+var dialogue = [
+  ['Enfermero','Buenas tardes, señora. Me llamo Daniel y soy su enfermero. ¿Cómo se llama usted?','Good afternoon, ma\'am. My name is Daniel and I\'m your nurse. What is your name?'],
+  ['Paciente','Me llamo Carmen Ríos.','My name is Carmen Ríos.'],
+  ['Enfermero','Mucho gusto. ¿Cómo se escribe su apellido?','Nice to meet you. How do you spell your last name?'],
+  ['Paciente','Erre, i con acento, o, ese.','R, í with an accent, o, s.'],
+  ['Enfermero','Gracias. ¿De dónde es usted?','Thank you. Where are you from?'],
+  ['Paciente','Soy de Honduras.','I\'m from Honduras.'],
+  ['Enfermero','¿Cuántos años tiene?','How old are you?'],
+  ['Paciente','Tengo sesenta y cuatro años.','I\'m sixty-four.'],
+  ['Enfermero','Con permiso. Pase, por favor. Siéntese aquí. ¿En qué puedo ayudarle?','Excuse me. Come in, please. Sit here. How can I help you?'],
+  ['Paciente','Tuve una caída en la calle. Me duele mucho la muñeca izquierda.','I had a fall in the street. My left wrist hurts a lot.'],
+  ['Enfermero','Lo siento mucho. ¿Desde cuándo le duele?','I\'m very sorry. Since when has it hurt?'],
+  ['Paciente','Desde ayer.','Since yesterday.'],
+  ['Enfermero','Del uno al diez, ¿cuánto le duele?','From one to ten, how much does it hurt?'],
+  ['Paciente','Un siete. Es un dolor agudo.','A seven. It\'s a sharp pain.'],
+  ['Enfermero','Muéstreme dónde le duele. No mueva la mano, por favor. Voy a llamar al doctor.','Show me where it hurts. Don\'t move your hand, please. I\'m going to call the doctor.'],
+  ['Paciente','Muchas gracias. Es usted muy amable.','Thank you very much. You are very kind.'],
+  ['Enfermero','De nada. Espere aquí un momento.','You\'re welcome. Wait here a moment.']
+];
+function buildDialogue(){
+  document.getElementById('dlgBox').innerHTML = dialogue.map(function(l){
+    return '<p><span class="who'+(l[0]==='Paciente'?' pt':'')+'">'+l[0]+'</span>'+l[1]+'<span class="en">'+l[2]+'</span></p>';
+  }).join('');
+}
+function playDialogue(){ speak(dialogue.map(function(l){ return l[1]; })); }
+
+/* ── Practice test (20 MC, English gloss) ── */
+var examData = [
+  { q:'Cap. 1 · Son las 9:00 de la mañana. Usted saluda a un paciente con…', gloss:'It\'s 9:00 in the morning. You greet a patient with…', options:['Buenas tardes','Buenos días','Buenas noches','Hasta luego'], answer:1, explain:'Morning, until noon: <strong>Buenos días</strong>.' },
+  { q:'Cap. 1 · Usted <u>___</u> el doctor Ruiz, ¿verdad?', gloss:'You ___ Dr. Ruiz, right?', options:['eres','soy','es','son'], answer:2, explain:'Usted takes the él / ella form: <strong>usted es</strong>.' },
+  { q:'Cap. 1 · ¿Cuál oración es correcta?', gloss:'Which sentence is correct?', options:['Soy una enfermera.','Soy enfermera.','Es enfermera yo.','Me llamo enfermera.'], answer:1, explain:'No article with professions: <strong>Soy enfermera</strong>.' },
+  { q:'Cap. 1 · El paciente se llama Roberto Díaz Hernández. Su primer apellido es…', gloss:'The patient\'s name is Roberto Díaz Hernández. His first last name is…', options:['Roberto','Díaz','Hernández','Roberto Díaz'], answer:1, explain:'The father\'s last name comes first: <strong>Díaz</strong>. File him under Díaz.' },
+  { q:'Cap. 1 · Usted no entiende al paciente. Usted dice…', gloss:'You don\'t understand the patient. You say…', options:['¿Puede repetir, por favor?','De nada.','Igualmente.','Mucho gusto.'], answer:0, explain:'<strong>¿Puede repetir, por favor?</strong> Also: <em>Más despacio, por favor.</em>' },
+
+  { q:'Cap. 2 · Antes de tocar al paciente, usted dice…', gloss:'Before touching the patient, you say…', options:['Con permiso.','De nada.','Lo siento mucho.','Igualmente.'], answer:0, explain:'<strong>Con permiso</strong> before an action, such as entering or touching.' },
+  { q:'Cap. 2 · El mandato formal (usted) de «tomar» es…', gloss:'The formal (usted) command of "tomar" is…', options:['Toma','Tome','Tomen','Tomo'], answer:1, explain:'-AR → -E: <strong>Tome</strong> la medicina. <em>Toma</em> is tú; <em>tomen</em> is ustedes.' },
+  { q:'Cap. 2 · El mandato formal (usted) de «hacer» es…', gloss:'The formal (usted) command of "hacer" is…', options:['Hace','Haga','Hago','Haz'], answer:1, explain:'yo <em>hago</em> → <strong>haga</strong>. <em>Haz</em> is the tú command.' },
+  { q:'Cap. 2 · Usted quiere decirle «Don\'t move» a un paciente adulto.', gloss:'You want to tell an adult patient "Don\'t move."', options:['No te muevas.','No se mueva.','No muévase.','No se muevan.'], answer:1, explain:'Negative usted: the pronoun goes before the verb: <strong>No se mueva</strong>.' },
+  { q:'Cap. 2 · Una familia espera en la sala. Usted dice: «<u>___</u> aquí, por favor.»', gloss:'A family is waiting in the waiting room. You say: "___ here, please."', options:['Siéntese','Siéntate','Siéntense','Sentarse'], answer:2, explain:'A group → ustedes: <strong>Siéntense</strong>.' },
+
+  { q:'Cap. 3 · Mi papá <u>___</u> dolor de pecho.', gloss:'My dad ___ chest pain.', options:['está','tiene','hay','es'], answer:1, explain:'A symptom → <strong>tiene</strong> dolor de pecho.' },
+  { q:'Cap. 3 · <u>___</u> mucha sangre en el piso.', gloss:'There is a lot of blood on the floor.', options:['Está','Tiene','Hay','Es'], answer:2, explain:'There is / there are → <strong>hay</strong>.' },
+  { q:'Cap. 3 · La operadora del 911 dice «No cuelgue». Significa…', gloss:'The 911 operator says "No cuelgue." It means…', options:['Don\'t hang up.','Calm down.','Call 911.','Don\'t move him.'], answer:0, explain:'<strong>No cuelgue</strong> = Don\'t hang up (colgar → cuelgue).' },
+  { q:'Cap. 3 · ¿Cuál número es «setenta y ocho»?', gloss:'Which number is "setenta y ocho"?', options:['68','78','87','708'], answer:1, explain:'<em>Setenta</em> = 70, so <strong>78</strong>. Sesenta = 60.' },
+  { q:'Cap. 3 · Usted quiere saber la edad del paciente. Pregunta…', gloss:'You want to know the patient\'s age. You ask…', options:['¿Cuántos años es?','¿Cuántos años tiene?','¿Qué edad está?','¿Cuántos años hay?'], answer:1, explain:'Age uses tener: <strong>¿Cuántos años tiene?</strong>' },
+
+  { q:'Cap. 4 · Me <u>___</u> las rodillas.', gloss:'My knees hurt.', options:['duele','duelen','duelo','dolor'], answer:1, explain:'<em>Las rodillas</em> is plural → <strong>duelen</strong>.' },
+  { q:'Cap. 4 · A mi hijo <u>___</u> duele el oído.', gloss:'My son\'s ear hurts.', options:['me','le','les','te'], answer:1, explain:'One third person (a mi hijo) → <strong>le</strong>.' },
+  { q:'Cap. 4 · «El tobillo» es…', gloss:'"El tobillo" is…', options:['the wrist','the elbow','the ankle','the hip'], answer:2, explain:'<strong>El tobillo</strong> = ankle. Wrist = <em>la muñeca</em>, elbow = <em>el codo</em>, hip = <em>la cadera</em>.' },
+  { q:'Cap. 4 · Para saber cuánto tiempo tiene el dolor, usted pregunta…', gloss:'To find out how long the patient has had the pain, you ask…', options:['¿Dónde le duele?','¿Desde cuándo le duele?','¿Cómo es el dolor?','¿Le duele mucho?'], answer:1, explain:'<strong>¿Desde cuándo le duele?</strong> Answer: <em>Desde ayer.</em>' },
+  { q:'Cap. 4 · «Es un dolor sordo» significa…', gloss:'"Es un dolor sordo" means…', options:['It\'s a sharp pain.','It\'s a dull pain.','The pain comes and goes.','It doesn\'t hurt.'], answer:1, explain:'<em>Sordo</em> = dull. <em>Agudo</em> = sharp.' }
+];
+function checkExam(){
+  var correct = 0; examData.forEach(function(_, i){ if(revealMC('exam', i)) correct++; });
+  var byCap = [0,0,0,0]; examData.forEach(function(it, i){ if(quizState['exam'][i]===it.answer) byCap[Math.floor(i/5)]++; });
+  setMsg('rsExam', correct===examData.length, correct+' / '+examData.length+' correctas. Cap. 1: '+byCap[0]+'/5 · Cap. 2: '+byCap[1]+'/5 · Cap. 3: '+byCap[2]+'/5 · Cap. 4: '+byCap[3]+'/5.'+(correct===examData.length?' ¡Listo para el examen! ✓':' Repase el capítulo con menos puntos.'));
+  updateCompletion();
+}
+function resetExam(){ resetMC('exam'); document.getElementById('rsExam').className='res-msg'; document.getElementById('rsExam').textContent=''; updateCompletion(); }
+
+/* ── Matching (mixed) ── */
+var matchData = [
+  {es:'Mucho gusto', en:'Nice to meet you'},
+  {es:'¿Cómo se escribe?', en:'How do you spell it?'},
+  {es:'Que se mejore', en:'Get well soon'},
+  {es:'Con permiso', en:'Excuse me / May I?'},
+  {es:'Siéntese', en:'Sit down'},
+  {es:'Respire profundo', en:'Take a deep breath'},
+  {es:'Llame al 911', en:'Call 911'},
+  {es:'No cuelgue', en:'Don\'t hang up'},
+  {es:'la herida', en:'wound'},
+  {es:'la rodilla', en:'knee'},
+  {es:'un dolor agudo', en:'a sharp pain'},
+  {es:'¿Desde cuándo?', en:'Since when?'}
+];
+
+/* ── Short answer ── */
+var shortData = [
+  { q:'Salude a una paciente por la tarde y preséntese.', gloss:'Greet a patient in the afternoon and introduce yourself.', all:['buenas','tardes'], any:['llamo','soy'], minW:4, hint:'Usa «Buenas tardes, señora. Me llamo… / Soy…».' },
+  { q:'Pregúntele a un paciente adulto cómo se llama y de dónde es.', gloss:'Ask an adult patient his name and where he is from.', all:['como','se','llama','donde','es'], minW:6, hint:'Usa «¿Cómo se llama usted? ¿De dónde es usted?» (usted, no tú).' },
+  { q:'Dele dos instrucciones a un paciente adulto: sentarse y respirar profundo.', gloss:'Give an adult patient two instructions: sit down and take a deep breath.', all:['sientese','respire'], minW:3, hint:'Usa «Siéntese, por favor. Respire profundo».' },
+  { q:'Llame al 911: diga que hay un accidente y que su amigo no puede respirar.', gloss:'Call 911: say there is an accident and your friend can\'t breathe.', all:['hay','accidente','no','puede','respirar'], minW:7, hint:'Usa «Hay un accidente. Mi amigo no puede respirar».' },
+  { q:'Diga que su abuela tiene ochenta años y que le duele la cadera.', gloss:'Say that your grandmother is eighty and her hip hurts.', all:['tiene','anos','le','duele','cadera'], any:['ochenta','80'], minW:7, hint:'Usa «Mi abuela tiene ochenta años. Le duele la cadera» (tener + años; le duele).' },
+  { q:'Pregúntele al paciente dónde le duele y desde cuándo.', gloss:'Ask the patient where it hurts and since when.', all:['donde','le','duele','desde','cuando'], minW:5, hint:'Usa «¿Dónde le duele? ¿Desde cuándo?».' }
+];
+
+/* ── Register challenge ── */
+var gameData = [
+  {n:'La señora Ruiz (70 años) · sentarse', a:'Siéntese', o:['Siéntese','Siéntate','Siéntense']},
+  {n:'Mateo (6 años) · abrir la boca', a:'Abre la boca', o:['Abra la boca','Abre la boca','Abran la boca']},
+  {n:'Una familia en la sala de espera · pasar', a:'Pasen', o:['Pase','Pasa','Pasen']},
+  {n:'Un paciente adulto nuevo · su nombre', a:'¿Cómo se llama usted?', o:['¿Cómo se llama usted?','¿Cómo te llamas?','¿Cómo se llaman?']},
+  {n:'Una niña de 8 años · ¿dónde duele?', a:'¿Dónde te duele?', o:['¿Dónde le duele?','¿Dónde te duele?','¿Dónde les duele?']},
+  {n:'Don Luis (adulto) · no moverse', a:'No se mueva', o:['No se mueva','No te muevas','No se muevan']},
+  {n:'Un niño de 5 años · no moverse', a:'No te muevas', o:['No se mueva','No te muevas','No se muevan']},
+  {n:'Paciente adulto · despedida', a:'Cuídese', o:['Cuídese','Cuídate','Cuídense']},
+  {n:'Los padres de un bebé · esperar aquí', a:'Esperen aquí', o:['Espere aquí','Espera aquí','Esperen aquí']},
+  {n:'Un compañero de clase · ¿de dónde?', a:'¿De dónde eres?', o:['¿De dónde es usted?','¿De dónde eres?','¿De dónde son?']},
+  {n:'Una señora (adulta) · respirar profundo', a:'Respire profundo', o:['Respire profundo','Respira profundo','Respiren profundo']},
+  {n:'Paciente adulto · ¿duele aquí?', a:'¿Le duele aquí?', o:['¿Le duele aquí?','¿Te duele aquí?','¿Les duele aquí?']}
+];
+
+/* ── Completion meter ── */
+var BLANK_SETS = [['r1_',8],['r2_',8],['r3_',9],['r4_',8],['r5_',6]];
+var ORAL_N = 8;
+function idsFilled(prefix, n){ var out=[]; for(var i=1;i<=n;i++) out.push(val(prefix+i).length>0); return out; }
+function oralChecked(){ var a=[]; for(var i=0;i<ORAL_N;i++){ var el=document.getElementById('oc'+i); a.push(!!(el && el.checked)); } return a; }
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length>0]; } },
+  { label:'Cap. 1', tab:'c1', items:function(){ return idsFilled('r1_',8); } },
+  { label:'Cap. 2', tab:'c2', items:function(){ return idsFilled('r2_',8); } },
+  { label:'Cap. 3', tab:'c3', items:function(){ return idsFilled('r3_',9); } },
+  { label:'Cap. 4', tab:'c4', items:function(){ return idsFilled('r4_',8); } },
+  { label:'Práctica mixta', tab:'mx', items:function(){ return idsFilled('r5_',6).concat([matchDone, gFinished]); } },
+  { label:'Examen', tab:'ex', items:function(){ return examData.map(function(_, i){ return quizState['exam'][i]!==null; }).concat(shortData.map(function(_, i){ return val('sa'+i).length>0; })); } },
+  { label:'Oral', tab:'or', items:oralChecked }
+];
+function completionStats(){ return completionGroups.map(function(g){ var a=g.items(); return { label:g.label, tab:g.tab, done:a.filter(Boolean).length, total:a.length }; }); }
+
+/* ── Live score ── */
+function blanksCorrect(prefix, n){ var c=0; for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(el && isRight(el)) c++; } return c; }
+function computeScore(){
+  var correct=0, total=0;
+  BLANK_SETS.forEach(function(b){ correct+=blanksCorrect(b[0],b[1]); total+=b[1]; });
+  shortData.forEach(function(_, i){ if(val('sa'+i) && gradeShort(i).ok) correct++; }); total += shortData.length;
+  correct += mMatched; total += matchData.length;
+  examData.forEach(function(it, i){ if(quizState['exam'] && quizState['exam'][i]===it.answer) correct++; }); total += examData.length;
+  correct += gScore; total += gameData.length;
+  return { correct:correct, total:total };
+}
+function updateScore(){ var s=computeScore(); var pct=s.total?Math.round(s.correct/s.total*100):0; var el=document.getElementById('completionScore'); if(el) el.textContent='★ '+pct+'% correcto'; }
+function updateCompletion(){
+  if(!quizState['exam']) return;
+  var stats = completionStats(), d=0, t=0;
+  stats.forEach(function(g){ d+=g.done; t+=g.total; });
+  var pct = t ? Math.round(d/t*100) : 0;
+  document.getElementById('completionPct').textContent = pct+'%';
+  document.getElementById('pf').style.width = pct+'%';
+  document.getElementById('completionLegend').innerHTML = stats.map(function(g){ return '<button type="button" class="legend-pill '+(g.done===g.total?'done':'')+'" onclick="jumpTab(\''+g.tab+'\')">'+g.label+' '+g.done+'/'+g.total+'</button>'; }).join('');
+  updateScore();
+}
+function jumpTab(tab){ var btns=document.querySelectorAll('.tab'); for(var i=0;i<btns.length;i++){ if((btns[i].getAttribute('onclick')||'').indexOf("'"+tab+"'")!==-1){ switchTab(tab, btns[i]); return; } } switchTab(tab, null); }
+document.addEventListener('input', updateCompletion);
+document.addEventListener('change', updateCompletion);
+
+/* ── Student report ── */
+function buildReportHtml(name){
+  var stamp = new Date().toLocaleString('en-US',{ year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  var heads = ['Cap. 1 · Ser, llamarse y saludos','Cap. 2 · Mandatos','Cap. 3 · Emergencias y números','Cap. 4 · Doler y el dolor','Práctica mixta · Escuche y escriba'];
+  var blanks = BLANK_SETS.map(function(b, k){ return collectBlanks(b[0], b[1], heads[k]); });
+  var blankCorrect=0, blankTotal=0; blanks.forEach(function(g){ blankCorrect+=g.correct; blankTotal+=g.total; });
+  var saItems = shortData.map(function(s, i){ var v=val('sa'+i), r=gradeShort(i); return { label:s.q, value:v, ok:r.ok, msg:r.msg }; });
+  var saCorrect = saItems.filter(function(x){return x.ok;}).length;
+  var exItems = mcReport(examData, 'exam'), exCorrect = exItems.filter(function(x){return x.ok;}).length;
+  var matchItem = [{ label:'Emparejamiento', value: matchDone?(matchData.length+' / '+matchData.length):(mMatched+' / '+matchData.length), ok: matchDone, msg: matchDone?'Completado.':'Sin terminar.' }];
+  var gameItem = [{ label:'Reto: registro', value: gFinished?(gScore+' / '+gameData.length):'', ok: gFinished && gScore>=10, msg: gFinished?(gScore>=10?'¡Bien dominado!':'Practica un poco más.'):'Sin terminar.' }];
+  var oralLabels = ['Saludar y pedir el nombre','Origen, edad e inglés','Tres instrucciones','Llamada al 911','Preguntar sobre el dolor','Describir el dolor','Hablar con un niño','Despedida formal'];
+  var oc = oralChecked();
+  var oralItems = oralLabels.map(function(l, i){ return { label:l, value: oc[i]?'Lo puedo hacer':'', ok: oc[i], msg: oc[i]?'Autoevaluación.':'Practica más.' }; });
+
+  var totalCorrect = blankCorrect + saCorrect + exCorrect + mMatched + gScore;
+  var totalItems = blankTotal + saItems.length + exItems.length + matchData.length + gameData.length;
+  var scorePct = totalItems ? Math.round(totalCorrect/totalItems*100) : 0;
+  var byCap = [0,0,0,0]; examData.forEach(function(it, i){ if(quizState['exam'][i]===it.answer) byCap[Math.floor(i/5)]++; });
+
+  var stats = completionStats(), cd=0, ct=0; stats.forEach(function(g){ cd+=g.done; ct+=g.total; });
+  var cpct = ct?Math.round(cd/ct*100):0;
+  var compRows = stats.map(function(g){ return '<li class="'+(g.done===g.total?'checked':'')+'">'+(g.done===g.total?'☑':'☐')+' '+escapeHtml(g.label)+': '+g.done+' / '+g.total+'</li>'; }).join('');
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Reporte Repaso Examen Parcial · '+escapeHtml(name)+'</title><style>'+
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}"+
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;}'+
+  'h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}'+
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;} .meta strong{color:#1B2A4A;}"+
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}'+
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}'+
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}"+
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}"+
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;}'+
+  'td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}'+
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;}"+
+  'td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;} td.mark{text-align:center;font-weight:bold;width:26px;}'+
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;} tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}'+
+  '.blanktxt{color:#A89A88;} ul.check{list-style:none;padding:0;font-size:0.9rem;} ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;} ul.check li.checked{color:#4C7A3C;}'+
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}"+
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}'+
+  '</style></head><body>'+
+  '<header><h1>Spanish for Healthcare Workers · Repaso para el examen parcial</h1><p class="meta"><strong>Estudiante:</strong> '+escapeHtml(name)+' &nbsp;·&nbsp; <strong>Capítulos 1 a 4</strong> &nbsp;·&nbsp; Generado: '+escapeHtml(stamp)+'</p></header>'+
+  '<div class="summary"><strong>Puntuación:</strong> '+totalCorrect+' / '+totalItems+' correctas (<strong>'+scorePct+'%</strong>) · Página completada al <strong>'+cpct+'%</strong> ('+cd+' / '+ct+' elementos)<br><strong>Examen de práctica por capítulo:</strong> Cap. 1: '+byCap[0]+'/5 · Cap. 2: '+byCap[1]+'/5 · Cap. 3: '+byCap[2]+'/5 · Cap. 4: '+byCap[3]+'/5</div>'+
+  '<h2>Progreso por sección</h2><ul class="check">'+compRows+'</ul>'+
+  reportTable('Repaso por capítulo y comprensión auditiva', blankCorrect+' / '+blankTotal+' correctas', blanks)+
+  reportTable('Práctica mixta · Juegos', '', [{ heading:'Emparejamiento', items:matchItem }, { heading:'Reto: ¿usted, tú o ustedes?', items:gameItem }])+
+  reportTable('Examen de práctica · Parte A', exCorrect+' / '+exItems.length+' correctas', [{ heading:'Opción múltiple', items:exItems }])+
+  reportTable('Examen de práctica · Parte B', saCorrect+' / '+saItems.length+' válidas', [{ heading:'Respuesta escrita', items:saItems }])+
+  reportTable('Examen oral · Autoevaluación', oc.filter(Boolean).length+' / '+ORAL_N+' marcadas', [{ heading:'Juegos de rol', items:oralItems }])+
+  '<footer>South Puget Sound Community College · Spanish for Healthcare Workers · Repaso para el examen parcial · Para entregar como PDF, abre este archivo e imprime → Guardar como PDF.</footer></body></html>';
+}
+function downloadReport(){
+  var field=document.getElementById('studentName'), name=(field.value||'').trim();
+  if(!name){ field.focus(); field.style.borderColor='#A8452A'; alert('Escribe tu nombre primero. / Please enter your name before downloading the report.'); setTimeout(function(){ field.style.borderColor=''; },2500); return; }
+  var html=buildReportHtml(name); var safe=name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'estudiante';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'}); var url=URL.createObjectURL(blob);
+  var a=document.createElement('a'); a.href=url; a.download='Repaso_Examen_Parcial_'+safe+'.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+}
+
+/* ── Build everything ── */
+buildFlash(vocabGreet.concat(vocabPhrases), 'fc1', '');
+buildFlash(vocabCourtesy.concat(vocabCare), 'fc2', '');
+buildFlash(vocabDental, 'fc2pod', 'pod-card');
+buildFlash(vocabEmerg.concat(vocabHelp), 'fc3', '');
+buildFlash(vocabFlight, 'fc3pod', 'pod-card');
+buildNumbers();
+buildFlash(vocabHead.concat(vocabLimbs, vocabPain), 'fc4', '');
+buildFlash(vocabTrauma, 'fc4pod', 'pod-card');
+buildDialogue();
+buildMC(examData, 'exam', 'examCont');
+buildMatch();
+buildShort();
+startGame();
+updateCompletion();
+</script>
+
+</body>
+</html>
